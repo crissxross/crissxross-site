@@ -1,0 +1,76 @@
+/* LAYOUT PRIMITIVES based on Every Layout https://every-layout.dev/layouts/ - I've adapted the naming conventions to make things clearer for my purposes */
+
+/* TODO - copied from old crissxross - REPLACE or ADAPT for crissxross-site */
+
+/*********** LAYOUT PRIMITIVES ***********/
+
+/* box-sizing overrides to content-box so that if left & right padding is needed, it won't take away from the --measure (default 75ch) maximum width */
+.center-measure {
+  box-sizing: content-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--measure);
+  padding-left: var(--s0);
+  padding-right: var(--s0);
+  /* outline: 1px solid green; */
+}
+
+.stack {
+  --space: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack > * + * {
+  margin-top: var(--space);
+}
+
+.grid-auto {
+  display: grid;
+  gap: var(--s2);
+}
+@supports (width: min(340px, 100%)) {
+  .grid-auto {
+    grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
+  }
+}
+/* 👆 min() calculates the shortest length from a set of comma-separated values */
+/* so if viewport is narrower than 340px, it goes to 100% */
+/* @supports because a few mobile browsers don't yet support min() */
+/* See https://every-layout.dev/layouts/grid/#the-solution */
+
+/*********** LAYOUT UTILITIES ***********/
+
+/* similar to stack layout primitive but for normal flow */
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+/* NOTE: container is good for auto-grid of cards */
+.container {
+  /* individually set so they can be individually overwritten */
+  padding-top: var(--s2);
+  padding-bottom: var(--s2);
+  padding-left: var(--s2);
+  padding-right: var(--s2);
+}
+
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+/* to use with full bleed for consistent centred content - see https://piccalil.li/tutorial/creating-a-full-bleed-css-utility */
+.center-wrapper {
+  max-width: var(--width, 60rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--pad, 0);
+  padding-right: var(--pad, 0);
+}

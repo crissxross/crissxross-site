@@ -1,0 +1,141 @@
+/* TODO - copied from wnb-voices - REPLACE or ADAPT for crissxross */
+
+body {
+  font-family: var(--ff-system);
+  font-size: var(--step-0);
+  /* TODO - check scroll overflow */
+   /* to avoid scroll-based layout shifts */
+  overflow-y: scroll;
+  /* Based on Bear Blog's default CSS (see more below) */
+  margin: auto;
+  padding: 20px;
+	max-width: 65ch;
+	text-align: left;
+	background-color: #fff;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	line-height: 1.5;
+	color: #444;
+}
+
+h1 {
+  font-size: var(--step-5);
+}
+h2 {
+  font-size: var(--step-4);
+}
+h3 {
+  font-size: var(--step-3);
+}
+h4 {
+  font-size: var(--step-2);
+}
+h5 {
+  font-size: var(--step-1);
+}
+h6 {
+  font-size: var(--step-0);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+}
+
+:is(a, button, input, textarea, summary) {
+  --outline-size: max(2px, 0.08em);
+  --outline-style: solid;
+  --outline-color: currentColor;
+}
+
+:is(a, button, input, textarea, summary):focus {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+/* CSS NESTING not yet a baseline feature but I can use because of PostCSS plugin: postcss-preset-env */
+a {
+  color: hsl(300, 100%, 40%);
+	&:hover,
+	&:focus {
+		text-decoration-thickness: 0.25em;
+		text-underline-offset: 0.075em;
+	}
+	&:not(:hover) {
+		text-decoration-color: hsl(300 100% 40% / 0.8);
+	}
+	&:focus-visible {
+		text-decoration-thickness: max(0.08em, 1px);
+		text-underline-offset: 0.15em;
+	}
+}
+/* a {
+	color: hsl(300, 100%, 40%);
+}
+a:hover, a:focus {
+  text-decoration-thickness: 0.25em;
+  text-underline-offset: 0.075em;
+}
+a:not(:hover) {
+  text-decoration-color: hsl(300 100% 40% / 0.8);
+}
+a:focus-visible {
+	text-decoration-thickness: max(0.08em, 1px);
+	text-underline-offset: 0.15em;
+} */
+
+
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+	color: #222;
+}
+nav a {
+	margin-right: 10px;
+}
+textarea {
+	width: 100%;
+	font-size: 16px;
+}
+input {
+	font-size: 16px;
+}
+content {
+	line-height: 1.6;
+}
+table {
+	width: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+code {
+	padding: 2px 5px;
+	background-color: #f2f2f2;
+}
+pre {
+	padding: 1rem;
+}
+pre > code {
+	all: unset;
+}
+blockquote {
+	border: 1px solid #999;
+	color: #222;
+	padding: 2px 0px 2px 20px;
+	margin: 0px;
+	font-style: italic;
+}

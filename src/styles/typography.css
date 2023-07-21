@@ -1,0 +1,41 @@
+:root {
+  --ff-system: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+
+  /* TODO - test scale at max ZOOM (200% or 400%?) */
+
+  /* TODO - this scale copied from wnb-voices - REPLACE or ADAPT for crissxross */
+
+  /* Utopia typography scale based on: */
+  /* MIN VIEWPORT w:320, fs:14, scale:1.125 */
+  /* MAX VIEWPORT w:1140, fs:16, scale:1.25 */
+
+  /* @link https://utopia.fyi/type/calculator?c=320,14,1.125,1140,16,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+  --step--2: clamp(0.64rem, calc(0.71rem + -0.10vw), 0.69rem);
+  --step--1: clamp(0.78rem, calc(0.77rem + 0.04vw), 0.80rem);
+  --step-0: clamp(0.88rem, calc(0.83rem + 0.24vw), 1.00rem);
+  --step-1: clamp(0.98rem, calc(0.88rem + 0.52vw), 1.25rem);
+  --step-2: clamp(1.11rem, calc(0.93rem + 0.89vw), 1.56rem);
+  --step-3: clamp(1.25rem, calc(0.97rem + 1.38vw), 1.95rem);
+  --step-4: clamp(1.40rem, calc(1.00rem + 2.03vw), 2.44rem);
+  --step-5: clamp(1.58rem, calc(1.00rem + 2.88vw), 3.05rem);
+  --step-6: clamp(1.77rem, calc(0.98rem + 3.98vw), 3.82rem);
+  --step-7: clamp(2.00rem, calc(0.91rem + 5.41vw), 4.77rem);
+  --step-8: clamp(2.25rem, calc(0.80rem + 7.25vw), 5.96rem);
+  --step-9: clamp(2.53rem, calc(0.60rem + 9.61vw), 7.45rem);
+  --step-10: clamp(2.84rem, calc(0.32rem + 12.63vw), 9.31rem);
+
+  /* Note: 400 = normal, 700 = bold */
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+}
+
+/*
+NOTE for reference re. fluid typography:
+"By mixing a viewport unit with a relative unit, we give the user control over the font size"
+Fluid Typography • Josh W Comeau's Course - https://courses.joshwcomeau.com/css-for-js/05-responsive-css/15-fluid-typography
+*/
