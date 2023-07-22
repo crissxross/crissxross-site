@@ -1,5 +1,17 @@
 :root {
-  --ff-system: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  /* font list handled by postcss-preset-env plugin */
+  --ff-system: system-ui;
+
+  --ff-monospace: ui-monospace,
+                  Menlo, Monaco,
+                  "Cascadia Mono", "Segoe UI Mono",
+                  "Roboto Mono",
+                  "Oxygen Mono",
+                  "Ubuntu Monospace",
+                  "Source Code Pro",
+                  "Fira Mono",
+                  "Droid Sans Mono",
+                  "Courier New", monospace;
 
   /* TODO - test scale at max ZOOM (200% or 400%?) */
 

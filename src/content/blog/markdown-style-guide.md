@@ -39,7 +39,7 @@ The blockquote element represents content that is quoted from another source, op
 
 #### Blockquote without attribution
 
-> Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
+> Tiam, ad mint andaepu dandae nostion secatur sequo quae.
 > **Note** that you can use _Markdown syntax_ within a blockquote.
 
 #### Blockquote with attribution
@@ -70,6 +70,8 @@ The blockquote element represents content that is quoted from another source, op
 </html>
 ```
 
+And here's some inline code `function doSomething(param);`
+
 ## List Types
 
 #### Ordered List
@@ -94,7 +96,25 @@ The blockquote element represents content that is quoted from another source, op
   - Milk
   - Cheese
 
-## Other Elements — abbr, sub, sup, kbd, mark
+## Some HTML elements
+
+### Input
+
+<label for="name">Name (4 to 8 characters):</label>
+
+<input type="text" id="name" name="name" required
+       minlength="4" maxlength="8" size="10">
+
+### Text area
+
+<label for="story">Tell us your story:</label>
+
+<textarea id="story" name="story"
+          rows="5" cols="33">
+It was a dark and stormy night...
+</textarea>
+
+### Other Elements — abbr, sub, sup, kbd, mark
 
 <abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
 

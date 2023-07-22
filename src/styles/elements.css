@@ -8,14 +8,13 @@ body {
   overflow-y: scroll;
   /* Based on Bear Blog's default CSS (see more below) */
   margin: auto;
-  padding: 20px;
+  padding: var(--space-m);
 	max-width: 65ch;
 	text-align: left;
 	background-color: #fff;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	line-height: 1.5;
-	color: #444;
+	color: #222;
 }
 
 h1 {
@@ -40,10 +39,15 @@ h6 {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   line-height: 1;
+	margin: 0 0 var(--space-s) 0;
 }
 
+/* TODO finish focus outline css variables */
+/* from S.Eckles - https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/ */
 :is(a, button, input, textarea, summary) {
   --outline-size: max(2px, 0.08em);
   --outline-style: solid;
@@ -71,47 +75,23 @@ a {
 		text-underline-offset: 0.15em;
 	}
 }
-/* a {
-	color: hsl(300, 100%, 40%);
-}
-a:hover, a:focus {
-  text-decoration-thickness: 0.25em;
-  text-underline-offset: 0.075em;
-}
-a:not(:hover) {
-  text-decoration-color: hsl(300 100% 40% / 0.8);
-}
-a:focus-visible {
-	text-decoration-thickness: max(0.08em, 1px);
-	text-underline-offset: 0.15em;
-} */
-
 
 /*
   The CSS in this style tag is based off of Bear Blog's default CSS.
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-b {
-	color: #222;
-}
 nav a {
-	margin-right: 10px;
+	margin-right: 0.625em;
 }
 textarea {
 	width: 100%;
-	font-size: 16px;
+	font-size: var(--step-0);
 }
 input {
-	font-size: 16px;
+	font-size: var(--step-0);
 }
+/* Not sure what this rule is for - it could be for Astro's Content component */
 content {
 	line-height: 1.6;
 }
@@ -122,12 +102,17 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+code,
+pre {
+	font-family: var(--ff-monospace);
+	font-size: var(--step--1);
+}
 code {
-	padding: 2px 5px;
+	padding: 0.125em 0.313em;
 	background-color: #f2f2f2;
 }
 pre {
-	padding: 1rem;
+	padding: var(--space-m);
 }
 pre > code {
 	all: unset;
@@ -135,7 +120,7 @@ pre > code {
 blockquote {
 	border: 1px solid #999;
 	color: #222;
-	padding: 2px 0px 2px 20px;
-	margin: 0px;
+	padding: 0.125em 0 0.125em 1.25em;
+	margin: 0 0 var(--space-xs) 0;
 	font-style: italic;
 }
