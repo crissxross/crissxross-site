@@ -1,8 +1,10 @@
 @import 'reset.css';
+@import 'oklch-palette.css';
 @import 'typography.css';
 @import 'scale.css';
 @import 'elements.css';
 @import 'layouts.css';
+@import 'objects.css';
 /* Always import utilities last */
 @import 'utilities.css';
 

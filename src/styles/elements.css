@@ -1,20 +1,23 @@
 /* TODO - copied from wnb-voices - REPLACE or ADAPT for crissxross */
 
+html {
+	background: var(--surface-1);
+	color: var(--text-1);
+}
+
 body {
-  font-family: var(--ff-system);
+	font-family: var(--ff-system);
   font-size: var(--step-0);
   /* TODO - check scroll overflow */
-   /* to avoid scroll-based layout shifts */
+	/* to avoid scroll-based layout shifts */
   overflow-y: scroll;
   /* Based on Bear Blog's default CSS (see more below) */
   margin: auto;
   padding: var(--space-m);
 	max-width: 65ch;
 	text-align: left;
-	background-color: #fff;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: #222;
 }
 
 h1 {
@@ -61,14 +64,15 @@ h6 {
 
 /* CSS NESTING not yet a baseline feature but I can use because of PostCSS plugin: postcss-preset-env */
 a {
-  color: hsl(300, 100%, 40%);
+  color: var(--primary-5);
 	&:hover,
 	&:focus {
 		text-decoration-thickness: 0.25em;
 		text-underline-offset: 0.075em;
 	}
 	&:not(:hover) {
-		text-decoration-color: hsl(300 100% 40% / 0.8);
+		/* TODO previously I was reducing opacity - not sure I need this now */
+		text-decoration-color: var(--primary-5);
 	}
 	&:focus-visible {
 		text-decoration-thickness: max(0.08em, 1px);
@@ -109,7 +113,7 @@ pre {
 }
 code {
 	padding: 0.125em 0.313em;
-	background-color: #f2f2f2;
+	background-color: var(--surface-2);
 }
 pre {
 	padding: var(--space-m);
@@ -117,10 +121,24 @@ pre {
 pre > code {
 	all: unset;
 }
-blockquote {
+/* blockquote {
 	border: 1px solid #999;
 	color: #222;
 	padding: 0.125em 0 0.125em 1.25em;
 	margin: 0 0 var(--space-xs) 0;
 	font-style: italic;
+} */
+blockquote {
+  border-left: 4px solid var(--surface-3);
+  font-size: var(--step-1);
+  font-style: italic;
+  margin: var(--space-m) 0;
+  padding-inline: var(--space-m);
+}
+
+blockquote p {
+  padding-block-end: var(--space-3xs);
+}
+small {
+	color: var(--text-2);
 }
