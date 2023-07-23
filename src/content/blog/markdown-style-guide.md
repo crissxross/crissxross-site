@@ -96,6 +96,19 @@ And here's some inline code `function doSomething(param);`
   - Milk
   - Cheese
 
+
+### Other Elements — abbr, sub, sup, kbd, mark
+
+<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
+
+H<sub>2</sub>O
+
+X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
+
+Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
+
+Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+
 ## Some HTML elements
 
 ### Input
@@ -114,14 +127,23 @@ And here's some inline code `function doSomething(param);`
 It was a dark and stormy night...
 </textarea>
 
-### Other Elements — abbr, sub, sup, kbd, mark
+<div>
+  <input type="range" id="volume" name="volume"
+         min="0" max="11">
+  <label for="volume">Volume</label>
+</div>
 
-<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
+<div>
+  <input type="checkbox" id="scales" name="scales" checked>
+  <label for="scales">Scales</label>
+</div>
 
-H<sub>2</sub>O
-
-X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
-
-Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
-
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+<div>
+  <input type="radio" id="huey" name="drone" value="huey"
+          checked>
+  <label for="huey">Huey</label>
+</div>
+<div>
+  <input type="radio" id="dewey" name="drone" value="dewey">
+  <label for="dewey">Dewey</label>
+</div>

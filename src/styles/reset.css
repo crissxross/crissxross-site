@@ -34,7 +34,7 @@ ol[role="list"] {
 }
 
 /* Set core root defaults */
-html {
+html:focus-within {
   scroll-behavior: smooth;
 }
 
@@ -48,7 +48,7 @@ body {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
-  /* Relatively sized thickness and offset */
+  /* Relatively sized thickness and offset - from S.Eckles (as above) */
   text-decoration-thickness: max(0.08em, 1px);
   text-underline-offset: 0.15em;
 }
@@ -90,6 +90,9 @@ select {
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
   *,
   *::before,
   *::after {

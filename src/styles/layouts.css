@@ -2,75 +2,96 @@
 
 /* TODO - copied from old crissxross - REPLACE or ADAPT for crissxross-site */
 
-/*********** LAYOUT PRIMITIVES ***********/
+/************ LAYOUT PRIMITIVES **************/
 
-/* box-sizing overrides to content-box so that if left & right padding is needed, it won't take away from the --measure (default 75ch) maximum width */
+/* box-sizing overrides to content-box so that if left & right padding is needed, it won't take away from the --measure maximum width */
 .center-measure {
   box-sizing: content-box;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: var(--measure);
-  padding-left: var(--s0);
-  padding-right: var(--s0);
+  margin-inline: auto;
+  max-inline-size: var(--measure);
+  padding-inline-start: var(--space-s);
+  padding-inline-end: var(--space-s);
   /* outline: 1px solid green; */
 }
 
 .stack {
-  --space: 1rem;
+  --space: var(--space-m);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-
 .stack > * {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
-
 .stack > * + * {
-  margin-top: var(--space);
+  margin-block-start: var(--space);
 }
 
 .grid-auto {
   display: grid;
-  gap: var(--s2);
+  gap: var(--space-s);
 }
-@supports (width: min(340px, 100%)) {
+@supports (width: min(250px, 100%)) {
   .grid-auto {
-    grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
+    grid-template-columns: repeat(
+      auto-fit, minmax(min(250px, 100%), 1fr)
+    );
   }
 }
 /* 👆 min() calculates the shortest length from a set of comma-separated values */
-/* so if viewport is narrower than 340px, it goes to 100% */
+/* so if viewport is narrower than 250px, it goes to 100% */
 /* @supports because a few mobile browsers don't yet support min() */
 /* See https://every-layout.dev/layouts/grid/#the-solution */
 
-/*********** LAYOUT UTILITIES ***********/
+/* S.Eckles solution 👇 - from https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/ */
+.layout-grid {
+  --layout-grid-min: 30ch;
+  --layout-grid-gap: 3vw;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, var(--layout-grid-min)), 1fr)
+  );
+  gap: var(--layout-grid-gap);
+}
+
+/* TODO: include or consider S.Eckles' solution for flex-layout-grid here:  */
+/* https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/#css-flexbox-layout */
+
+/************ LAYOUT UTILITIES *************/
 
 /* similar to stack layout primitive but for normal flow */
 .flow > * + * {
-  margin-top: var(--flow-space, 1em);
+  margin-block-start: var(--flow-space, 1em);
 }
+/* ALTERNATIVE FLOW */
+/* .flow > *:not(:first-child) {
+    margin-block-start: var(--flow-space, 1em);
+} */
 
 /* NOTE: container is good for auto-grid of cards */
 .container {
   /* individually set so they can be individually overwritten */
-  padding-top: var(--s2);
-  padding-bottom: var(--s2);
-  padding-left: var(--s2);
-  padding-right: var(--s2);
+  padding-block-start: var(--space-m);
+  padding-block-end: var(--space-m);
+  padding-inline-start: var(--space-m);
+  padding-inline-end: var(--space-m);
 }
 
 .full-bleed {
   width: 100vw;
-  margin-left: calc(50% - 50vw);
+  margin-inline-start: calc(50% - 50vw);
 }
-
 /* to use with full bleed for consistent centred content - see https://piccalil.li/tutorial/creating-a-full-bleed-css-utility */
 .center-wrapper {
-  max-width: var(--width, 60rem);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--pad, 0);
-  padding-right: var(--pad, 0);
+  max-inline-size: var(--width, 60rem);
+  margin-inline: auto;
+  padding-inline-start: var(--pad, 0);
+  padding-inline-end: var(--pad, 0);
+}
+
+.full-width {
+  width: min(100% - var(--inline-margin, 2rem));
+  margin-inline: auto;
 }
