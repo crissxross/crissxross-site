@@ -3,23 +3,31 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header class="center-measure">
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://github.com/crissxross" target="_blank">GitHub</HeaderLink>
-		<!-- <HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink> -->
-	</nav>
+<header>
+	<div class="center-measure flex">
+		<h2>
+			{SITE_TITLE}
+		</h2>
+		<nav>
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="/about">About</HeaderLink>
+		</nav>
+	</div>
 </header>
 <style>
 	header {
-		margin: 0em 0 2em;
+		padding-block: var(--space-s);
+		background-color: var(--surface-2);
 	}
 	h2 {
-		margin: 0.5em 0;
+		font-size: var(--step-3);
+	}
+	.flex {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		column-gap: var(--space-m);
+		/* justify-content: space-between; */
 	}
 </style>

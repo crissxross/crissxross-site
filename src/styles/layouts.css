@@ -14,6 +14,13 @@
   /* outline: 1px solid green; */
 }
 
+.grid-stack {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /* FIXME doesn't work without min-height - why ??? */
+  min-height: 100vh;
+}
+
 .stack {
   --space: var(--space-m);
   display: flex;
