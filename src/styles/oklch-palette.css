@@ -7,8 +7,8 @@ html {
   --primary-3: oklch(90% .1 var(--hue));
   --primary-4: oklch(80% .2 var(--hue));
   --primary-5: oklch(72% .25 var(--hue));
-  --primary-6: oklch(67% .31 var(--hue));
-  --primary-7: oklch(58% .33 var(--hue));
+  --primary-6: oklch(67% .3 var(--hue));
+  --primary-7: oklch(58% .32 var(--hue));
   --primary-8: oklch(50% .27 var(--hue));
   --primary-9: oklch(35% .25 var(--hue));
   --primary-10: oklch(25% .2 var(--hue));
