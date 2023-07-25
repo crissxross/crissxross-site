@@ -1,7 +1,7 @@
 ---
 title: 'Markdown Style Guide'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-pubDate: 'Jul 01 2022'
+pubDate: '01 Sep 2022'
 heroImage: '/placeholder-hero.jpg'
 ---
 
@@ -56,6 +56,8 @@ The blockquote element represents content that is quoted from another source, op
 | _italics_ | **bold** | `code` |
 
 ## Code Blocks
+
+<mark>NOTE:</mark> code block causes overflow problems on small screens due to `text-wrap: nowrap` (I think). <mark>FIX THIS!</mark>
 
 ```html
 <!DOCTYPE html>
