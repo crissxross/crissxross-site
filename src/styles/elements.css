@@ -14,6 +14,10 @@ body {
 	overflow-wrap: break-word;
 }
 
+main {
+	padding-block: var(--space-l);
+}
+
 h1 {
   font-size: var(--step-5);
 }
@@ -54,19 +58,6 @@ figcaption {
   max-width: var(--measure);
 }
 
-/* TODO finish focus outline css variables */
-/* from S.Eckles - https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/ */
-:is(a, button, input, textarea, summary) {
-  --outline-size: max(2px, 0.08em);
-  --outline-style: solid;
-  --outline-color: currentColor;
-}
-
-:is(a, button, input, textarea, summary):focus {
-  outline: var(--outline-size) var(--outline-style) var(--outline-color);
-  outline-offset: var(--outline-offset, var(--outline-size));
-}
-
 /* CSS NESTING not yet a baseline feature but I can use because of PostCSS plugin: postcss-preset-env */
 a {
   color: var(--link-color);
@@ -83,6 +74,20 @@ a {
 		text-underline-offset: 0.15em;
 	}
 }
+
+/* TODO finish focus outline css variables */
+/* from S.Eckles - https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/ */
+:is(a, button, input, textarea, summary) {
+  --outline-size: max(2px, 0.08em);
+  --outline-style: solid;
+  --outline-color: currentColor;
+}
+
+:is(a, button, input, textarea, summary):focus {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
 
 /*
   The CSS in this style tag is based off of Bear Blog's default CSS.
