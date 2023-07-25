@@ -1,9 +1,15 @@
+/* Full-screen container with header & footer technique using html & body from Temani Afif - https://verpex.com/blog/website-tips/modern-layouts-using-css-grid */
+
 html {
+	display: grid;
+	min-height: 100%;
 	background: var(--surface-1);
 	color: var(--text-1);
 }
 
 body {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
 	font-family: var(--ff-system);
   font-size: var(--step-0);
   /* TODO - check scroll overflow */
