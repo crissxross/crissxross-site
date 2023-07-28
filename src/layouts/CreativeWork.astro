@@ -23,7 +23,11 @@ const { title, description, releaseDate } = Astro.props;
 	<main class="center-measure">
 		<article class="flow">
 			<h1 class="title">{title}</h1>
-			<!-- <FormattedDate date={releaseDate} /> -->
+      {
+        releaseDate && (
+          <FormattedDate date={releaseDate} />
+        )
+      }
 			<p>{description}</p>
 			<hr />
 			<slot />

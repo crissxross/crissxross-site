@@ -3,8 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 
-// const posts = (await getCollection('works')).sort(
-// 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+// const works = (await getCollection('works')).sort(
+// 	(a, b) => b.data.releaseDate.valueOf() - a.data.releaseDate.valueOf()
 // );
 
 const works = await getCollection('works');
