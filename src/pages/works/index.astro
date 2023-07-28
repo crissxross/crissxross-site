@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+
+// const posts = (await getCollection('works')).sort(
+// 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+// );
+
+const works = await getCollection('works');
+---
+
+<!-- TODO: change these styles -->
+<style>
+	ul {
+		display: grid;
+		list-style-type: none;
+		padding: unset;
+		gap: var(--space-2xs);
+	}
+	li {
+		display: flex;
+		gap: var(--space-s);
+		align-items: baseline;
+	}
+	li :global(time) {
+		font-weight: var(--fw-300);
+		font-style: italic;
+	}
+	li a {
+		font-size: var(--step-1);
+		font-weight: var(--fw-600);
+	}
+	/* li a:visited {
+		color: color-mix(in oklab, var(--link-color), grey);
+	} */
+</style>
+
+<BaseLayout>
+	<main class="center-measure">
+		<section>
+			<ul>
+				{
+					works.map((work) => (
+						<li>
+							<a href={`/works/${work.slug}/`}>{work.data.title}</a>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+	</main>
+</BaseLayout>
+

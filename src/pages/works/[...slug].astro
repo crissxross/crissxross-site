@@ -1,0 +1,21 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content';
+import CreativeWork from '../../layouts/CreativeWork.astro';
+
+export async function getStaticPaths() {
+	const works = await getCollection('works');
+	return works.map((work) => ({
+		params: { slug: work.slug },
+		props: work,
+	}));
+}
+type Props = CollectionEntry<'works'>;
+
+const work = Astro.props;
+const { Content } = await work.render();
+---
+
+<CreativeWork {...work.data}>
+	<!-- <h1>{work.data.title}</h1> -->
+	<Content />
+</CreativeWork>

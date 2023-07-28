@@ -1,0 +1,26 @@
+---
+id: heights
+title: Heights
+url: /movingpix/heights
+description: >-
+  An animated poem with my own ambient music based on my experience of
+  visiting Gaudi's 'Sagrada Familia' in Barcelona some years before.
+youtubeVideos:
+  - id: Ho-ZhEbchTw
+    name: Heights
+images:
+  - ''
+releaseDate: '2006'
+tech: originally created in Flash
+tags:
+  - showcase
+  - movingpix
+displayType: minor
+moreinfo: ''
+accolades:
+  - name: '''A Celebration'', Yorkshire Art Circus, Wakefield, 2006'
+    url: 'http://www.wdco.org/site/Yorkshire-Art-Circus/'
+---
+
+
+An animated poem with my own ambient music based on my experience of visiting Gaudi's 'Sagrada Familia' in Barcelona some years before.

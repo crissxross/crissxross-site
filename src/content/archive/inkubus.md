@@ -1,0 +1,38 @@
+---
+id: inkubus
+url: https://dreamingmethods.com/portfolio/inkubus/
+title: Inkubus
+description: >-
+  A first-person 3D video-game and coming-of-age story about a contemporary
+  teenage girl. She's connected, clued-in and canny but what lurks in the
+  deepest darkest regions beyond the screen?
+youtubeVideos: []
+images:
+  - ""
+releaseDate: "2014"
+tech: Unity 3D
+tags:
+  - showcase
+  - projects
+displayType: major
+collaborators: Made in collaboration with Andy Campbell.
+publisher: Dreaming Methods
+accolades:
+  - name: "'Dyscorpia' exhibition, Enterprise Square Galleries, Edmonton, Alberta,
+      Canada, 2019"
+    url: https://www.dyscorpia.com/home-2
+  - name: The New River Journal, Spring 2014
+    url: http://www.cddc.vt.edu/journals/newriver/14Spring/index.html
+  - name: "Electronic Literature Organization 2014: Hold the Light, Media Arts Show,
+      Milwaukee, USA"
+    url: http://conference.eliterature.org/2014/media
+  - name: Pathfinders Exhibit, Modern Language Association 2014 Convention, Chicago,
+      USA
+    url: http://dtc-wsuv.org/wp/pathfinders/exhibit/
+  - name: "'Words Unstable On The Table' exhibition, E-Poetry 2013, London, UK"
+    url: https://www.watermans.org.uk/new-media-arts-archive/words-unstable-on-the-table-2013/
+---
+
+
+A first-person 3D video-game and coming-of-age story about a contemporary teenage girl. She's connected, clued-in and canny but what lurks in the deepest darkest regions beyond the screen?
+
