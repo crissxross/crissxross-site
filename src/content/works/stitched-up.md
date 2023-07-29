@@ -7,11 +7,12 @@ description: >-
   Meanwhile, Joel is held prisoner in a dark place, subjected to the twisted
   interrogations of his female captor.
 author: Christine Wilks
+releaseDate: '2025'
+wip: true
 tech: web app
 tags:
   - projects
   - showcase
-wip: true
 ---
 
 

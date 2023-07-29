@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
+import FormattedYear from '../../components/FormattedYear.astro';
 
 const archive = (await getCollection('archive')).sort(
 	(a, b) => b.data.releaseDate.valueOf() - a.data.releaseDate.valueOf()
@@ -44,7 +45,7 @@ const archive = (await getCollection('archive')).sort(
 					archive.map((work) => (
 						<li>
 							<a href={`/archive/${work.slug}/`}>{work.data.title}</a>
-							<FormattedDate date={work.data.releaseDate} />
+							<FormattedYear date={work.data.releaseDate} />
 						</li>
 					))
 				}

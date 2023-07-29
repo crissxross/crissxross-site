@@ -2,12 +2,14 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
+import FormattedMonYear from '../../components/FormattedMonYear.astro';
 
-// const works = (await getCollection('works')).sort(
-// 	(a, b) => b.data.releaseDate.valueOf() - a.data.releaseDate.valueOf()
-// );
+const works = (await getCollection('works')).sort(
+	(a, b) => a.data.releaseDate.valueOf() - b.data.releaseDate.valueOf()
+);
 
-const works = await getCollection('works');
+// const works = await getCollection('works');
+const today = new Date();
 ---
 
 <!-- TODO: change these styles -->
@@ -44,6 +46,13 @@ const works = await getCollection('works');
 					works.map((work) => (
 						<li>
 							<a href={`/works/${work.slug}/`}>{work.data.title}</a>
+							{
+								work.data.releaseDate &&
+								work.data.releaseDate < today &&
+								(
+									<FormattedMonYear date={work.data.releaseDate} />
+								)
+							}
 						</li>
 					))
 				}

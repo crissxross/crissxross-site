@@ -4,7 +4,7 @@ researchProject: Writing New Body Worlds
 description: >-
   An interactive digital fiction for body image bibliotherapy. This is an international research-creation project with the participation of a group of young women and non-binary individuals from diverse backgrounds. We aim to address body dissatisfaction, which is so prevalent it has become the norm.
 author: Christine Wilks
-releaseDate: July 2023
+releaseDate: 10 July 2023
 tech: web app
 tags:
   - projects

@@ -27,8 +27,8 @@ const works = defineCollection({
 		// Transform string to Date object
 		releaseDate: z
 			.string()
-			.optional()
-			.transform((str) => (str ? new Date(str) : undefined)),
+			.or(z.date())
+			.transform((val) => new Date(val)),
 		wip: z.boolean(),
 		tech: z.string().optional(),
 		image: z.object({
@@ -46,6 +46,7 @@ const works = defineCollection({
 		}).array().optional(),
 		collaborators: z.string().optional(),
 		publisher: z.string().optional(),
+		// Advanced: Validate that the string is also a URL
 		url: z.string().url().optional(),
 	}),
 });
@@ -81,6 +82,7 @@ const archive = defineCollection({
 		}).array().optional(),
 		collaborators: z.string().optional(),
 		publisher: z.string().optional(),
+		// Advanced: Validate that the string is also a URL
 		url: z.string().url().optional(),
 	}),
 });
