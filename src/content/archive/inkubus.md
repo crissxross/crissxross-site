@@ -6,6 +6,7 @@ description: >-
   A first-person 3D video-game and coming-of-age story about a contemporary
   teenage girl. She's connected, clued-in and canny but what lurks in the
   deepest darkest regions beyond the screen?
+author: Christine Wilks
 youtubeVideos: []
 images:
   - ""

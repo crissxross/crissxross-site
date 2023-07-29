@@ -6,6 +6,7 @@ description: >-
   Cutting through memories, pinning down facts, stitching fabrications,
   unpicking the past - an interactive, animated memoir, exploring aspects of
   my relationship with my dressmaking mother.
+author: Christine Wilks
 youtubeVideos:
   - id: 2SLFuyZCtPo
     name: Fitting the Pattern screencast

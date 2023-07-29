@@ -8,6 +8,7 @@ description: >-
   of my remixes with personal commentary. Remixworx was an online
   collaborative creative project and this trail represents about one third of
   the remixes I created for it.
+author: Christine Wilks
 youtubeVideos:
   - id: fXI-pr55MuE
     name: Ada Lovelace Day

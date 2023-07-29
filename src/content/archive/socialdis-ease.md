@@ -5,6 +5,7 @@ url: /movingpix/socialdis-ease
 description: >-
   My first digital poem created in Flash where I begin to explore some
   possibilities of animating text and using sound.
+author: Christine Wilks
 youtubeVideos:
   - id: a_Zzqbhrrpc
     name: Social Dis-Ease

@@ -5,6 +5,7 @@ const blog = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		description: z.string(),
+		author: z.string(),
 		// Transform string to Date object
 		pubDate: z
 			.string()
@@ -22,6 +23,7 @@ const works = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		description: z.string(),
+		author: z.string(),
 		// Transform string to Date object
 		releaseDate: z
 			.string()
@@ -52,6 +54,7 @@ const archive = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		description: z.string(),
+		author: z.string(),
 		// Transform string to Date object
 		releaseDate: z
 			.string()

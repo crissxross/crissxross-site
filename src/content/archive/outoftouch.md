@@ -7,6 +7,7 @@ description: >-
   of reach, we form attachments whilst remaining detached, by turns kindling
   and dampening emotions. 'Out of Touch' includes a suite of animated and
   interactive digital poems for the web and live performance.
+author: Christine Wilks
 youtubeVideos:
   - id: wG_TzAD0Vp4
     name: Out of Touch

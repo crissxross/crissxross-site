@@ -6,6 +6,7 @@ description: >-
   to believe he's left her. Alone and desperate, she goes in search of him.
   Meanwhile, Joel is held prisoner in a dark place, subjected to the twisted
   interrogations of his female captor.
+author: Christine Wilks
 tech: web app
 tags:
   - projects

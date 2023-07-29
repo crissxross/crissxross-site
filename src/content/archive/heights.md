@@ -5,6 +5,7 @@ url: /movingpix/heights
 description: >-
   An animated poem with my own ambient music based on my experience of
   visiting Gaudi's 'Sagrada Familia' in Barcelona some years before.
+author: Christine Wilks
 youtubeVideos:
   - id: Ho-ZhEbchTw
     name: Heights

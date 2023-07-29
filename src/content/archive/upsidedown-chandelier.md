@@ -7,6 +7,7 @@ description: >-
   to the idea of repurposing during our residency at DIG Gallery in a former
   Slovak tobacco factory which had employed mostly women. (Web version shown
   here.)
+author: Christine Wilks
 youtubeVideos:
   - id: ypAUiOTRkZQ
     name: Upsidedown Chandelier

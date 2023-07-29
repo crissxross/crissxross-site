@@ -7,6 +7,7 @@ description: >-
   conflation of the words, remember, memory and memento mori. Through multiple
   levels, the player grapples with the effects of degenerative dementia on an
   intimate circle of characters.
+author: Christine Wilks
 youtubeVideos:
   - id: 4eKCgQ85rh8
     name: Rememori

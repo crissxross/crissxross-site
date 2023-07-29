@@ -6,6 +6,7 @@ description: >-
   Dark musings on the artist's muse. A poetic multimedia work in which I
   repurpose a series of disturbing images I made as a young art student,
   giving both the artist and her muse a voice.
+author: Christine Wilks
 youtubeVideos: []
 images:
   - ''

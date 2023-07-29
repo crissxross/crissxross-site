@@ -6,6 +6,7 @@ description: >-
   Variations of 'Out of Touch' - a suite of digital works I made for live
   performance. Touching interfaces that keep us out of reach yet perpetually
   connected and forever desiring...
+author: Christine Wilks
 youtubeVideos:
   - id: wG_TzAD0Vp4
     name: Out of Touch screencast

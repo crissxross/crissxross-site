@@ -3,6 +3,7 @@ id: wedrank
 title: We Drank
 url: /movingpix/wedrank
 description: An animated digital poem with my own ambient music.
+author: Christine Wilks
 youtubeVideos:
   - id: 8qE00frm6d8
     name: We Drank

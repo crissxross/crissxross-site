@@ -7,6 +7,7 @@ description: >-
   on words becomes a game of chance where meaning is at stake. Give it a spin
   and see which dictum, watchword, slogan, epigram, mantra, motto, pitch,
   patter or spiel fortune favours for you!
+author: Christine Wilks
 youtubeVideos: []
 images:
   - ''

@@ -8,6 +8,7 @@ description: >-
   stubbornly refuses to contemplate treatment or hearing aids. The daughter is
   hurt and mystified by his angry reactions, but the key to his behaviour lies
   deep in the past.
+author: Christine Wilks
 youtubeVideos:
   - id: q8z5YIJIedw
     name: Tailspin screencast

@@ -8,6 +8,7 @@ description: >-
   more. Initiated by Randy Adams (1951-2014) in 2006, it grew to number more
   than 500 individual creative works. I was an active member from 2007 to 2013
   and contributed more than 100 works, mainly in Flash.
+author: Christine Wilks
 youtubeVideos: []
 images:
   - ''

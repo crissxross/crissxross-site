@@ -4,6 +4,7 @@ title: Sitting Pretty (aka Before We Begin)
 url: 'http://crissxross.net/MovingPix/BeforeWeBegin/index.html'
 description: >-
   This interactive and whimisical 'Hypertext' was my first creative work for the web, combining text, image and sound.
+author: Christine Wilks
 youtubeVideos: []
 images:
   - ''
