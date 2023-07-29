@@ -1,7 +1,5 @@
 ---
-id: socialdis-ease
 title: Social Dis-Ease
-url: /movingpix/socialdis-ease
 description: >-
   My first digital poem created in Flash where I begin to explore some
   possibilities of animating text and using sound.

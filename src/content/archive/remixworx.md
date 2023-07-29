@@ -1,6 +1,4 @@
 ---
-id: remixworx
-url: 'http://remixworx.com'
 title: R3M1XW0RX
 description: >-
   Remixworx was a collaborative creative space for remixing visual poetry,
@@ -9,10 +7,12 @@ description: >-
   than 500 individual creative works. I was an active member from 2007 to 2013
   and contributed more than 100 works, mainly in Flash.
 author: Christine Wilks
+url: 'http://remixworx.com'
 youtubeVideos: []
 images:
   - ''
-releaseDate: 2007-2013
+releaseDate: '2007'
+releasePeriod: to 2013
 tech: various media
 tags:
   - showcase

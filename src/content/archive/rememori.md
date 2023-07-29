@@ -1,6 +1,4 @@
 ---
-id: rememori
-url: /elit/rememori
 title: Rememori
 description: >-
   A poignant memory game and playable poem. The title, 'Rememori', is a

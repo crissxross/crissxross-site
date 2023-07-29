@@ -1,6 +1,4 @@
 ---
-id: underbelly
-url: /elit/underbelly
 title: Underbelly
 description: >-
   An award-winning playable story about a woman sculptor, carving on the site

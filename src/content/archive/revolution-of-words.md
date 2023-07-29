@@ -1,6 +1,4 @@
 ---
-id: revolutionwords
-url: 'http://crissxross.github.io/RevolOWords/'
 title: A Revolution of Words
 description: >-
   This interactive work invites you to 'Spin the Revolution' and thus a play
@@ -8,6 +6,7 @@ description: >-
   and see which dictum, watchword, slogan, epigram, mantra, motto, pitch,
   patter or spiel fortune favours for you!
 author: Christine Wilks
+url: 'http://crissxross.github.io/RevolOWords/'
 youtubeVideos: []
 images:
   - ''

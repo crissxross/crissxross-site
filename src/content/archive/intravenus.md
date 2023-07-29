@@ -1,7 +1,5 @@
 ---
-id: intravenus
 title: IntraVenus
-url: /movingpix/intravenus
 description: >-
   Dark musings on the artist's muse. A poetic multimedia work in which I
   repurpose a series of disturbing images I made as a young art student,

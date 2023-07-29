@@ -1,5 +1,4 @@
 ---
-id: beforewebegin
 title: Sitting Pretty (aka Before We Begin)
 url: 'http://crissxross.net/MovingPix/BeforeWeBegin/index.html'
 description: >-

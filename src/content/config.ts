@@ -60,11 +60,12 @@ const archive = defineCollection({
 			.string()
 			.or(z.date())
 			.transform((val) => new Date(val)),
+		releasePeriod: z.string().optional(),
 		tech: z.string().optional(),
 		image: z.object({
       src: z.string(),
       alt: z.string(),
-    }),
+    }).optional(),
 		youtubeVideos: z.object({
 			id: z.string(),
 			name: z.string(),

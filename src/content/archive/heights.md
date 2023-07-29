@@ -1,7 +1,5 @@
 ---
-id: heights
 title: Heights
-url: /movingpix/heights
 description: >-
   An animated poem with my own ambient music based on my experience of
   visiting Gaudi's 'Sagrada Familia' in Barcelona some years before.

@@ -1,6 +1,4 @@
 ---
-id: io-outoftouch
-url: /oot/outoftouch
 title: I/O Out of Touch
 description: >-
   Variations of 'Out of Touch' - a suite of digital works I made for live

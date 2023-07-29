@@ -1,6 +1,4 @@
 ---
-id: fitting-the-pattern
-url: /elit/fitting-the-pattern
 title: Fitting the Pattern
 description: >-
   Cutting through memories, pinning down facts, stitching fabrications,

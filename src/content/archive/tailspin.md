@@ -1,6 +1,4 @@
 ---
-id: tailspin
-url: /elit/tailspin
 title: Tailspin
 description: >-
   An interactive story about a father, his daughter and her children. The

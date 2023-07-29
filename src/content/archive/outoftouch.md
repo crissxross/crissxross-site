@@ -1,6 +1,4 @@
 ---
-id: outoftouch
-url: /oot/outoftouch
 title: Out of Touch
 description: >-
   In our world of perpetual connectivity, touching interfaces that keep us out

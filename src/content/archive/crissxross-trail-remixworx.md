@@ -1,6 +1,4 @@
 ---
-id: crissxross-trail-remixworx
-url: /remixworx/cx-trail-remix
 title: A crissxross trail < R3M1XW0RX
 description: >-
   Conceived as a poetic interactive infographic full of multimedia animated

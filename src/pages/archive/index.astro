@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+
+const archive = (await getCollection('archive')).sort(
+	(a, b) => b.data.releaseDate.valueOf() - a.data.releaseDate.valueOf()
+);
+
+// const archive = await getCollection('archive');
+---
+
+<!-- TODO: change these styles -->
+<style>
+	ul {
+		display: grid;
+		list-style-type: none;
+		padding: unset;
+		gap: var(--space-2xs);
+	}
+	li {
+		display: flex;
+		gap: var(--space-s);
+		align-items: baseline;
+	}
+	li :global(time) {
+		font-weight: var(--fw-300);
+		font-style: italic;
+	}
+	li a {
+		font-size: var(--step-1);
+		font-weight: var(--fw-600);
+	}
+	/* li a:visited {
+		color: color-mix(in oklab, var(--link-color), grey);
+	} */
+</style>
+
+<BaseLayout>
+	<main class="center-measure">
+		<section>
+			<ul>
+				{
+					archive.map((work) => (
+						<li>
+							<a href={`/archive/${work.slug}/`}>{work.data.title}</a>
+							<FormattedDate date={work.data.releaseDate} />
+						</li>
+					))
+				}
+			</ul>
+		</section>
+	</main>
+</BaseLayout>
+

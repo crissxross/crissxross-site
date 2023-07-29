@@ -1,6 +1,4 @@
 ---
-id: upsidedown-chandelier
-url: /remixworx/upsidedown-chandelier
 title: Upside Down Chandelier
 description: >-
   A digital installation by an international group of women artists responding
@@ -13,7 +11,7 @@ youtubeVideos:
     name: Upsidedown Chandelier
 images:
   - ''
-releaseDate: 2013/2014
+releaseDate: '2013'
 tech: originally created in Flash
 tags:
   - showcase
