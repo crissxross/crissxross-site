@@ -1,6 +1,6 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content';
-import CreativeWork from '../../layouts/CreativeWork.astro';
+import ArchiveWork from '../../layouts/ArchiveWork.astro';
 
 export async function getStaticPaths() {
 	const archive = await getCollection('archive');
@@ -15,7 +15,7 @@ const work = Astro.props;
 const { Content } = await work.render();
 ---
 
-<CreativeWork {...work.data}>
-	<!-- <h1>{work.data.title}</h1> -->
+<ArchiveWork {...work.data}>
 	<Content />
-</CreativeWork>
+	<!-- <p>By {work.data.author}</p> -->
+</ArchiveWork>

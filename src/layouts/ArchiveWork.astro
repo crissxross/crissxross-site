@@ -4,19 +4,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 
 
-type Props = CollectionEntry<'works'>['data'];
+type Props = CollectionEntry<'archive'>['data'];
 
 const { title, description, releaseDate } = Astro.props;
-const today = new Date();
 ---
 
 <style>
 	hr {
 		border-top: 1px solid var(--surface-3);
 		margin: 1rem 0;
-	}
-	span {
-		font-style: italic;
 	}
 </style>
 
@@ -26,12 +22,9 @@ const today = new Date();
 			<h1 class="title">{title}</h1>
 			<p>
 				{
-					releaseDate &&
-					releaseDate < today ?
-					(
-						<FormattedDate date={releaseDate} option='m-y' />
-					):
-					<span>Work in progress</span>
+					releaseDate && (
+						<FormattedDate date={releaseDate} option='y' />
+					)
 				}
 			</p>
 			<p>{description}</p>
