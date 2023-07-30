@@ -1,13 +1,24 @@
 ---
 interface Props {
 	date: Date;
+	option?: 'm-y' | 'y';
 }
 
-const { date } = Astro.props;
+const { date, option } = Astro.props;
 ---
 
 <time datetime={date.toISOString()}>
-	{
+	{ option === 'm-y' ?
+		date.toLocaleDateString('en-GB', {
+			year: 'numeric',
+			month: 'short',
+		}) :
+
+		option === 'y' ?
+		date.toLocaleDateString('en-GB', {
+			year: 'numeric',
+		}) :
+
 		date.toLocaleDateString('en-GB', {
 			year: 'numeric',
 			month: 'short',

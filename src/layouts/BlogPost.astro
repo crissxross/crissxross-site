@@ -13,8 +13,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		border-top: 1px solid var(--surface-3);
 		margin: 1rem 0;
 	}
-	.last-updated-on {
+	.date {
 		font-style: italic;
+	}
+	.last-updated-on {
+		padding-inline-start: var(--space-xs);
 	}
 </style>
 
@@ -23,14 +26,16 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<article class="flow">
 			{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
 			<h1 class="title">{title}</h1>
-			<FormattedDate date={pubDate} />
-			{
-				updatedDate && (
-					<div class="last-updated-on">
-						Last updated on <FormattedDate date={updatedDate} />
-					</div>
-				)
-			}
+			<p class="date">
+				<FormattedDate date={pubDate} />
+				{
+					updatedDate && (
+						<span class="last-updated-on">
+							Updated: <FormattedDate date={updatedDate} />
+						</span>
+					)
+				}
+			</p>
 			<hr />
 			<slot />
 		</article>
