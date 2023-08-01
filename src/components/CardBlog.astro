@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const {data, slug} = Astro.props.post;
+const today = new Date();
+---
+
+<div class="card">
+  <h2>
+    <a href={`/blog/${slug}`}>{data.title}</a>
+  </h2>
+  <FormattedDate date={data.pubDate} />
+  <p>{data.description}</p>
+</div>

@@ -1,49 +1,27 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
+import CardBlog from '../../components/CardBlog.astro';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
 
-<!-- TODO: change these styles -->
 <style>
 	ul {
-		display: grid;
-		list-style-type: none;
+    margin: unset;
 		padding: unset;
-		gap: var(--space-2xs);
 	}
-	li {
-		display: flex;
-		gap: var(--space-s);
-		align-items: baseline;
-	}
-	li :global(time) {
-		font-weight: var(--fw-300);
-		font-style: italic;
-	}
-	li a {
-		font-size: var(--step-1);
-		font-weight: var(--fw-600);
-	}
-	/* li a:visited {
-		color: color-mix(in oklab, var(--link-color), grey);
-	} */
 </style>
 
 <BaseLayout>
-	<main class="center-measure">
+	<main class="wrapper">
 		<section>
-			<ul>
+			<ul role="list" class="layout-grid">
 				{
 					posts.map((post) => (
-						<li>
-							<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-							<FormattedDate date={post.data.pubDate} />
-						</li>
+            <CardBlog post={post} />
 					))
 				}
 			</ul>
