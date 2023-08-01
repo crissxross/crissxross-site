@@ -9,8 +9,7 @@
   box-sizing: content-box;
   margin-inline: auto;
   max-inline-size: var(--measure);
-  padding-inline-start: var(--space-s);
-  padding-inline-end: var(--space-s);
+  padding-inline: var(--space-s);
   /* outline: 1px solid green; */
 }
 
@@ -47,7 +46,7 @@
 /* S.Eckles solution 👇 - from https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/ */
 .layout-grid {
   --layout-grid-min: 30ch;
-  --layout-grid-gap: 3vw;
+  --layout-grid-gap: var(--space-s);
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
@@ -84,11 +83,10 @@
   margin-inline-start: calc(50% - 50vw);
 }
 /* to use with full bleed for consistent centred content - see https://piccalil.li/tutorial/creating-a-full-bleed-css-utility */
-.center-wrapper {
+.wrapper {
   max-inline-size: var(--width, 60rem);
   margin-inline: auto;
-  padding-inline-start: var(--pad, 0);
-  padding-inline-end: var(--pad, 0);
+  padding-inline: var(--pad, 0);
 }
 
 .full-width {

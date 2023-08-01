@@ -1,57 +1,32 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
+import CardWork from '../../components/CardWork.astro';
 
 const works = (await getCollection('works')).sort(
 	(a, b) => a.data.releaseDate.valueOf() - b.data.releaseDate.valueOf()
 );
-
-// const works = await getCollection('works');
-const today = new Date();
 ---
 
-<!-- TODO: change these styles -->
 <style>
+  main {
+    display: grid;
+    justify-content: center;
+  }
 	ul {
-		display: grid;
-		list-style-type: none;
+    margin: unset;
 		padding: unset;
-		gap: var(--space-2xs);
 	}
-	li {
-		display: flex;
-		gap: var(--space-s);
-		align-items: baseline;
-	}
-	li :global(time) {
-		font-weight: var(--fw-300);
-		font-style: italic;
-	}
-	li a {
-		font-size: var(--step-1);
-		font-weight: var(--fw-600);
-	}
-	/* li a:visited {
-		color: color-mix(in oklab, var(--link-color), grey);
-	} */
 </style>
 
 <BaseLayout>
-	<main class="center-measure">
+	<main>
 		<section>
-			<ul>
+			<ul role="list" class="layout-grid">
 				{
 					works.map((work) => (
 						<li>
-							<a href={`/works/${work.slug}/`}>{work.data.title}</a>
-							{
-								work.data.releaseDate &&
-								work.data.releaseDate < today &&
-								(
-									<FormattedDate date={work.data.releaseDate} option='m-y' />
-								)
-							}
+							<CardWork work={work} />
 						</li>
 					))
 				}
