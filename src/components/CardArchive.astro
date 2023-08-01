@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+
+interface Props {
+  work: CollectionEntry<'archive'>;
+}
+
+const { data, slug } = Astro.props.work;
+const today = new Date();
+---
+
+<div class="card">
+  <h2>
+    <a href={`/archive/${slug}/`}>{data.title}</a>
+  </h2>
+  <p>{ data.description }</p>
+  {
+    <FormattedDate date={data.releaseDate} option='y' />
+  }
+</div>
