@@ -1,11 +1,7 @@
 ---
 title: Stitched Up
 description: >-
-  An interactive psychological thriller, featuring a 'Dude' rather than a
-  'Damsel' in distress. Sarah's husband, Joel, has disappeared but she refuses
-  to believe he's left her. Alone and desperate, she goes in search of him.
-  Meanwhile, Joel is held prisoner in a dark place, subjected to the twisted
-  interrogations of his female captor.
+  An interactive psychological thriller. Sarah's husband, Joel, has disappeared but she refuses to believe he's left her. Alone and desperate, she goes in search of him. Meanwhile, Joel is held prisoner in a dark place, subjected to the twisted interrogations of his captor.
 author: Christine Wilks
 releaseDate: '2025'
 wip: true
