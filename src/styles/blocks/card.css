@@ -5,4 +5,8 @@
   background: var(--surface-2);
   border: 1px solid var(--surface-4);
   padding: 1rem;
+  /* because most likely using in a grid */
+  max-width: unset;
 }
+
+/* TODO compare this with Andy Bell's card */

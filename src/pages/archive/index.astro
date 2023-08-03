@@ -12,8 +12,6 @@ const archive = (await getCollection('archive')).sort(
   main {
     padding-inline: var(--space-l);
     padding-inline: 3vw;
-    /* display: grid; */
-    /* justify-content: center; */
   }
 	ul {
     margin: unset;
@@ -24,7 +22,7 @@ const archive = (await getCollection('archive')).sort(
 <BaseLayout>
 	<main>
 		<section>
-			<ul role="list" class="layout-grid">
+			<ul class="grid" data-rows="masonry" role="list">
 				{
 					archive.map((work) => (
 						<li>

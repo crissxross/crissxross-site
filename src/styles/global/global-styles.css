@@ -1,5 +1,13 @@
-/* Full-screen container with header & footer technique using html & body from Temani Afif - https://verpex.com/blog/website-tips/modern-layouts-using-css-grid */
+/*
+  Global styles
 
+  Low-specificity, global styles that apply to the whole
+  project: https://cube.fyi/css.html
+*/
+
+/* TODO - compare these to Andy Bell's & include & adapt his global styles */
+
+/* Full-screen container with header & footer technique using html & body from Temani Afif - https://verpex.com/blog/website-tips/modern-layouts-using-css-grid */
 html {
 	display: grid;
 	min-height: 100%;
@@ -52,6 +60,7 @@ h6 {
   line-height: 1;
 }
 
+/* FIXME max-width causing an issue with my cards */
 p,
 h1,
 h2,

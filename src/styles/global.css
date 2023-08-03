@@ -1,17 +1,38 @@
-@import 'reset.css';
-@import 'oklch-palette.css';
-@import 'typography.css';
-@import 'scale.css';
-@import 'elements.css';
-@import 'layouts.css';
-@import 'objects.css';
-/* Always import utilities last */
-@import 'utilities.css';
+/* Following Andy Bell's CUBE methodology - https://cube.fyi/ */
 
-/* TODO - follow Andy Bell's CUBE methodology - https://cube.fyi/ */
+/* GLOBAL */
+@import 'global/reset.css';
+@import 'global/typography.css';
+@import 'global/scale.css';
+@import 'global/oklch-palette.css';
+@import 'global/variables.css';
+@import 'global/global-styles.css';
+
+/* BLOCKS */
+@import 'blocks/card.css';
+@import 'blocks/prose.css';
+@import 'blocks/section.css';
+
+/* COMPOSITIONS */
+@import 'compositions/grid.css';
+@import 'compositions/cluster.css';
+@import 'compositions/repel.css';
+@import 'compositions/sidebar.css';
+@import 'compositions/reel.css';
+@import 'compositions/center-measure.css';
+
+/* UTILITIES */
+/* Always import utilities last */
+@import 'utilities/flow.css';
+@import 'utilities/wrapper.css';
+@import 'utilities/region.css';
+@import 'utilities/visually-hidden.css';
+@import 'utilities/all-center.css';
+
 /* CUBE:
+  Global CSS
   C - Composition
   U - Utilities
   B - Blocks
   E - Exceptions
- */
+*/

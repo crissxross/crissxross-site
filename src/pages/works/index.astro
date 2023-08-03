@@ -9,10 +9,10 @@ const works = (await getCollection('works')).sort(
 ---
 
 <style>
-  main {
+  /* main {
     display: grid;
     justify-content: center;
-  }
+  } */
 	ul {
     margin: unset;
 		padding: unset;
@@ -21,8 +21,8 @@ const works = (await getCollection('works')).sort(
 
 <BaseLayout>
 	<main>
-		<section>
-			<ul role="list" class="layout-grid">
+		<section class="wrapper">
+			<ul class="grid" data-layout="50-50" role="list">
 				{
 					works.map((work) => (
 						<li>

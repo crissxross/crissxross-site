@@ -11,21 +11,14 @@ import { SITE_TITLE } from '../consts';
 	h2 {
 		font-size: var(--step-3);
 	}
-	.flex {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: baseline;
-		column-gap: var(--space-m);
-		/* justify-content: space-between; */
-	}
 </style>
 
 <header>
-	<div class="center-measure flex">
+	<div class="repel wrapper">
 		<h2>
 			{SITE_TITLE}
 		</h2>
-		<nav>
+		<nav class="cluster">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/works">Creative Works</HeaderLink>
 			<HeaderLink href="/archive">Archive</HeaderLink>

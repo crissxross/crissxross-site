@@ -1,0 +1,44 @@
+/**
+ * WRAPPER
+ * Sets a max width, adds a consistent gutter and horizontally
+ * centers the contents
+ * Info: https://piccalil.li/quick-tip/use-css-clamp-to-create-a-more-flexible-wrapper-utility/
+ */
+ .wrapper {
+  max-width: var(--wrapper-max-width, 85rem);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  position: relative;
+}
+
+/* TODO Check - do I need position: relative on the wrapper? */
+
+/* TODO Compare with WRAPPER UTILITY in web.dev (see below) source (based on CUBE) here - https://github.com/GoogleChrome/web.dev/blob/main/src/scss/utilities/_wrapper.scss */
+
+/* WRAPPER UTILITY - WEB.DEV VERSION */
+/* Info: https://web.dev/design-system/css-utilities/#wrapper */
+
+/* NOTE: duplicate widths are for no clamp support */
+/* .wrapper {
+  margin-inline: auto;
+  width: 85rem;
+  width: clamp(16rem, 95vw, 85rem);
+  padding-inline:  var(--gutter);
+  position: relative;
+}
+
+.wrapper[data-size='narrow'] {
+  width: 62rem;
+  width: clamp(16rem, 95vw, 62rem);
+  padding-inline: 0;
+}
+
+.wrapper[data-size='extra-narrow'] {
+  width: 46rem;
+  width: clamp(16rem, 95vw, 46rem);
+  padding-inline:  var(--gutter);
+}
+
+.wrapper[data-flush] {
+  padding-inline: 0;
+} */

@@ -1,6 +1,4 @@
 :root {
-  --measure: 60ch;
-
   /* Utopia space scale based on typography scale: */
   /* MIN VIEWPORT w:320, fs:14, scale:1.125 */
   /* MAX VIEWPORT w:1140, fs:16, scale:1.25 */

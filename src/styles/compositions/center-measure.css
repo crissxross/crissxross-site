@@ -1,0 +1,8 @@
+/* box-sizing overrides to content-box so that if left & right padding is needed, it won't take away from the --measure maximum width */
+.center-measure {
+  box-sizing: content-box;
+  max-inline-size: var(--measure, 60ch);
+  margin-inline: auto;
+  padding-inline: var(--space-s);
+  /* outline: 1px solid green; */
+}
