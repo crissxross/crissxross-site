@@ -3,20 +3,6 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header>
-	<div class="center-measure flex">
-		<h2>
-			{SITE_TITLE}
-		</h2>
-		<nav>
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/works">Creative Works</HeaderLink>
-			<HeaderLink href="/archive">Archive</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-		</nav>
-	</div>
-</header>
 <style>
 	header {
 		padding-block: var(--space-s);
@@ -33,3 +19,18 @@ import { SITE_TITLE } from '../consts';
 		/* justify-content: space-between; */
 	}
 </style>
+
+<header>
+	<div class="center-measure flex">
+		<h2>
+			{SITE_TITLE}
+		</h2>
+		<nav>
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/works">Creative Works</HeaderLink>
+			<HeaderLink href="/archive">Archive</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="/about">About</HeaderLink>
+		</nav>
+	</div>
+</header>

@@ -39,6 +39,7 @@ html:focus-within {
 }
 
 /* Set core body defaults */
+/* Note: Andy Bell also includes min-height: 100vh; but I removed because I'm using Temani Afif's full-screen grid technique */
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;

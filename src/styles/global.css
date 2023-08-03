@@ -8,3 +8,10 @@
 /* Always import utilities last */
 @import 'utilities.css';
 
+/* TODO - follow Andy Bell's CUBE methodology - https://cube.fyi/ */
+/* CUBE:
+  C - Composition
+  U - Utilities
+  B - Blocks
+  E - Exceptions
+ */
