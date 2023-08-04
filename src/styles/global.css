@@ -4,6 +4,9 @@
 @import 'global/reset.css';
 @import 'global/typography.css';
 @import 'global/scale.css';
+@import "https://unpkg.com/open-props/oklch-hues.min.css";
+@import "https://unpkg.com/open-props/colors-oklch.min.css";
+@import "https://unpkg.com/open-props/gray-oklch.min.css";
 @import 'global/oklch-palette.css';
 @import 'global/variables.css';
 @import 'global/global-styles.css';
