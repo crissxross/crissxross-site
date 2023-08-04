@@ -8,21 +8,10 @@ const works = (await getCollection('works')).sort(
 );
 ---
 
-<style>
-  /* main {
-    display: grid;
-    justify-content: center;
-  } */
-	ul {
-    margin: unset;
-		padding: unset;
-	}
-</style>
-
 <BaseLayout>
-	<main>
-		<section class="wrapper">
-			<ul class="grid" data-layout="50-50" role="list">
+	<main class="wrapper">
+		<section>
+			<ul role="list" class="flow">
 				{
 					works.map((work) => (
 						<li>

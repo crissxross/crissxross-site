@@ -10,6 +10,13 @@ const {data, slug} = Astro.props.post;
 const today = new Date();
 ---
 
+<style>
+  .card {
+    display: grid;
+    gap: var(--space-xs);
+  }
+</style>
+
 <div class="card">
   <h2>
     <a href={`/blog/${slug}`}>{data.title}</a>

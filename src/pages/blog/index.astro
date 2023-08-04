@@ -8,17 +8,10 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 
-<style>
-	ul {
-    margin: unset;
-		padding: unset;
-	}
-</style>
-
 <BaseLayout>
 	<main class="wrapper">
 		<section>
-			<ul role="list" class="grid">
+			<ul role="list" class="flow">
 				{
 					posts.map((post) => (
             <CardBlog post={post} />

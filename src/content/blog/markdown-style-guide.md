@@ -58,7 +58,7 @@ The blockquote element represents content that is quoted from another source, op
 
 ## Code Blocks
 
-<mark>NOTE:</mark> code block causes overflow problems on small screens due to `text-wrap: nowrap` (I think). <mark>FIX THIS!</mark>
+<mark>NOTE:</mark> code block was causing overflow problems on small screens due to `text-wrap: nowrap` (I think). <mark>FIXED?</mark>
 
 ```html
 <!DOCTYPE html>
@@ -68,7 +68,7 @@ The blockquote element represents content that is quoted from another source, op
     <title>Example HTML5 Document</title>
   </head>
   <body>
-    <p>Test</p>
+    <p>Test. Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga.</p>
   </body>
 </html>
 ```
@@ -150,3 +150,21 @@ It was a dark and stormy night...
   <input type="radio" id="dewey" name="drone" value="dewey">
   <label for="dewey">Dewey</label>
 </div>
+<form>
+  <fieldset id="forms__action">
+    <legend>Action buttons</legend>
+    <p class="buttons-list">
+      <input type="submit" value="&lt;input type=submit&gt;">
+      <input type="button" value="&lt;input type=button&gt;">
+      <input type="reset" value="&lt;input type=reset&gt;">
+      <input type="submit" value="&lt;input disabled&gt;" disabled="">
+    </p>
+    <br>
+    <p class="buttons-list">
+      <button type="submit">&lt;button type=submit&gt;</button>
+      <button type="button">&lt;button type=button&gt;</button>
+      <button type="reset">&lt;button type=reset&gt;</button>
+      <button type="button" disabled="">&lt;button disabled&gt;</button>
+    </p>
+  </fieldset>
+</form>

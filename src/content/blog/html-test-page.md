@@ -5,12 +5,6 @@ author: Christine Wilks
 pubDate: 2023-07-31
 ---
 
-<style>
-  header {
-    margin-block: 1rem;
-  }
-</style>
-
 <div id="top" class="page" role="document">
   <h2>HTML5 Elements</h2>
   <p>Based on <a href="https://codepen.io/argyleink/pen/KKvRORE?editors=1000">Adam Argyle's codepen</a> which he based on <a href="https://cbracco.github.io/html5-test-page">this html5 test page</a>.</p>

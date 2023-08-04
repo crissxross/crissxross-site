@@ -5,8 +5,6 @@
   project: https://cube.fyi/css.html
 */
 
-/* TODO - compare these to Andy Bell's & include & adapt his global styles */
-
 /* Full-screen container with header & footer technique using html & body from Temani Afif - https://verpex.com/blog/website-tips/modern-layouts-using-css-grid */
 html {
 	display: grid;
@@ -60,7 +58,6 @@ h6 {
   line-height: 1;
 }
 
-/* FIXME max-width causing an issue with my cards */
 p,
 h1,
 h2,
@@ -71,6 +68,37 @@ h6,
 li,
 figcaption {
   max-width: var(--measure);
+}
+
+blockquote {
+  font-style: italic;
+  font-size: var(--step-1);
+  border-inline-start: 4px solid var(--surface-3);
+  margin: var(--space-m) 0;
+  padding-inline: var(--space-m);
+
+	& p {
+		padding-block-end: var(--space-3xs);
+	}
+}
+
+/* from Andy Bell's personal-site-eleventy */
+svg {
+  width: 1em;
+  height: 1em;
+}
+
+img {
+  height: auto;
+}
+
+img[src*='.svg'] {
+  width: 100%;
+}
+
+[role='list'] {
+  padding: 0;
+  margin-block-end: 0;
 }
 
 /* CSS NESTING not yet a baseline feature but I can use because of PostCSS plugin: postcss-preset-env */
@@ -103,33 +131,20 @@ a {
   outline-offset: var(--outline-offset, var(--outline-size));
 }
 
+hr {
+  border: none;
+  border-top: 1px solid var(--surface-3);
+  transform: translateY(-1px);
+  margin: var(--space-m-l) 0 !important;
+  max-width: 55rem;
+}
 
 /*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
+  The CSS below is from Astro blog starter template and is based off of Bear Blog's default CSS.
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
  */
-nav a {
-	margin-right: 0.625em;
-}
-
-blockquote {
-  border-left: 4px solid var(--surface-3);
-  font-size: var(--step-1);
-  font-style: italic;
-  margin: var(--space-m) 0;
-  padding-inline: var(--space-m);
-
-	& p {
-		padding-block-end: var(--space-3xs);
-	}
-}
-
 small {
 	color: var(--text-2);
-}
-/* TODO is this needed? */
-img {
-	height: auto;
 }
 
 input {
@@ -142,6 +157,7 @@ textarea {
 
 table {
 	width: 100%;
+  /* outline: 1px solid green; */
 }
 
 code,

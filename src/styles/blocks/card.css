@@ -1,12 +1,9 @@
 .card {
-  display: grid;
-  gap: 1ch;
-  border-radius: 10px;
   background: var(--surface-2);
+  color: var(--text-1);
+  padding: var(--space-s);
+  border-radius: var(--border-radius);
   border: 1px solid var(--surface-4);
-  padding: 1rem;
   /* because most likely using in a grid */
   max-width: unset;
 }
-
-/* TODO compare this with Andy Bell's card */

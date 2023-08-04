@@ -10,18 +10,20 @@ const { data, slug } = Astro.props.work;
 const today = new Date();
 ---
 
-<div class="card">
+<div class="card flow">
   <h2>
     <a href={`/works/${slug}/`}>{data.title}</a>
   </h2>
   <p>{ data.description }</p>
-  {
-    data.releaseDate && data.releaseDate < today ?
-    (
-      <FormattedDate date={data.releaseDate} option='m-y' />
-    ) :
-    (
-      <span>work in progress</span>
-    )
-  }
+  <p>
+    {
+      data.releaseDate && data.releaseDate < today ?
+      (
+        <FormattedDate date={data.releaseDate} option='m-y' />
+      ) :
+      (
+        <span>work in progress</span>
+      )
+    }
+  </p>
 </div>
