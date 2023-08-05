@@ -1,12 +1,38 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection, getEntry } from 'astro:content';
+import CardArchive from '../components/CardArchive.astro';
+import CardWork from '../components/CardWork.astro';
+
+const voices = await getEntry('works','voices');
+
+const archive = (await getCollection('archive')).sort(
+	(a, b) => b.data.releaseDate.valueOf() - a.data.releaseDate.valueOf()
+);
+
+// TODO: filter the archive collection to include only featured works
 ---
 
 <BaseLayout>
 	<main>
-    <article class="center-measure flow">
-      <h1>Hello, <a href="https://writing-new-bodies.web.app/">Voices!</a></h1>
-      <h2>Temporary content</h2>
+    <article class="wrapper flow">
+      <h1>Creative work by Christine Wilks</h1>
+      <section class="flow">
+        <h2>New release!</h2>
+        <CardWork work={voices} />
+      </section>
+      <h2>From the archive</h2>
+      <section>
+        <ul class="grid" role="list">
+          {
+            archive.map((work) => (
+              <li>
+                <CardArchive work={work} />
+              </li>
+            ))
+          }
+        </ul>
+      </section>
     </article>
 	</main>
 </BaseLayout>
