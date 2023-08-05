@@ -1,0 +1,7 @@
+/* from Open Props https://github.com/argyleink/open-props/blob/main/src/extra/utilities.css */
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
