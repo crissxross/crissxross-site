@@ -7,7 +7,7 @@
 @import "https://unpkg.com/open-props/oklch-hues.min.css";
 @import "https://unpkg.com/open-props/colors-oklch.min.css";
 @import "https://unpkg.com/open-props/gray-oklch.min.css";
-@import 'global/oklch-palette.css';
+@import 'global/oklch-theming.css';
 @import 'global/variables.css';
 @import 'global/global-styles.css';
 
