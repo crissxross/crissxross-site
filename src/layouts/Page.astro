@@ -1,14 +1,15 @@
 ---
-import type { CollectionEntry } from 'astro:content';
 import SingleLayout from './SingleLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-
-type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <style>
+	hr {
+		border-top: 1px solid var(--surface-3);
+		margin: 1rem 0;
+	}
 	.date {
 		font-style: italic;
 	}
@@ -33,4 +34,3 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
   <hr />
   <slot />
 </SingleLayout>
-

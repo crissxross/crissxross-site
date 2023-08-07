@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import SingleLayout from './SingleLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 
 
@@ -16,23 +16,19 @@ const today = new Date();
 	}
 </style>
 
-<BaseLayout>
-	<main class="center-measure">
-		<article class="flow">
-			<h1 class="title">{title}</h1>
-			<p>
-				{
-					releaseDate &&
-					releaseDate < today ?
-					(
-						<FormattedDate date={releaseDate} option='m-y' />
-					):
-					<span>Work in progress</span>
-				}
-			</p>
-			<p>{description}</p>
-			<hr />
-			<slot />
-		</article>
-	</main>
-</BaseLayout>
+<SingleLayout>
+  <h1 class="title">{title}</h1>
+  <p>
+    {
+      releaseDate &&
+      releaseDate < today ?
+      (
+        <FormattedDate date={releaseDate} option='m-y' />
+      ):
+      <span>Work in progress</span>
+    }
+  </p>
+  <p>{description}</p>
+  <hr />
+  <slot />
+</SingleLayout>
