@@ -6,11 +6,18 @@ import CardWork from '../components/CardWork.astro';
 
 const voices = await getEntry('works','voices');
 
-const archive = (await getCollection('archive')).sort(
+const archive = (await getCollection('archive'));
+
+const starArchive = archive.filter(
+  (work) => work.data.star
+);
+
+const featuredArchive = archive.filter(
+  (work) => work.data.featured && !work.data.star
+).sort(
 	(a, b) => b.data.releaseDate.valueOf() - a.data.releaseDate.valueOf()
 );
 
-// TODO: filter the archive collection to include only featured works
 ---
 
 <style>
@@ -27,11 +34,18 @@ const archive = (await getCollection('archive')).sort(
         <h2>New release!</h2>
         <CardWork work={voices} />
       </section>
-      <h2>From the archive</h2>
+      <h2>Selected works from the archive</h2>
       <section>
         <ul class="grid" role="list">
           {
-            archive.map((work) => (
+            starArchive.map((work) => (
+              <li>
+                <CardArchive work={work} />
+              </li>
+            ))
+          }
+          {
+            featuredArchive.map((work) => (
               <li>
                 <CardArchive work={work} />
               </li>

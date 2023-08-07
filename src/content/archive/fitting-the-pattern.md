@@ -63,8 +63,9 @@ accolades:
       Creative Writing and New Media MA Showcase at the IOCT Salon, Leicester,
       UK, 2008
     url: 'http://crissxross.net/wilx/2008/07/13/fitting-the-pattern/'
+featured: true
+star: true
 ---
-
 
 Cutting through memories, pinning down facts, stitching fabrications, unpicking the past - an interactive, animated memoir, exploring aspects of my relationship with my dressmaking mother.
 

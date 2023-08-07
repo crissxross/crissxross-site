@@ -27,6 +27,7 @@ accolades:
       Reading Interfaces: Inquiries at the Intersection of Literature and
       Technology, Cleveland, USA, 2015
     url: 'https://readinginterfaces.wordpress.com/'
+featured: true
 ---
 
 

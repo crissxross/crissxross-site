@@ -94,6 +94,7 @@ accolades:
     url: 'http://heranet.info/final-conference-and-humanities-festival'
   - name: 'ELMCIP conference on Remediating the Social, Edinburgh, UK, 2012'
     url: 'https://elmcip.net/event/elmcip-conference-remediating-social'
+featured: true
 ---
 
 

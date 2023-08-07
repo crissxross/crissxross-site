@@ -42,6 +42,7 @@ accolades:
       Museu do essencial e do além disso / Museum of the Essential and Beyond
       That, in 'Sala De Jogos/Games Room'
     url: 'http://arteonline.arq.br/museu/reformas/artgames.htm'
+featured: true
 ---
 
 

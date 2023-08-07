@@ -16,6 +16,7 @@ const blog = defineCollection({
 			.optional()
 			.transform((str) => (str ? new Date(str) : undefined)),
 		heroImage: z.string().optional(),
+    draft: z.boolean().optional(),
 	}),
 });
 
@@ -48,6 +49,8 @@ const works = defineCollection({
 		publisher: z.string().optional(),
 		// Advanced: Validate that the string is also a URL
 		url: z.string().url().optional(),
+    featured: z.boolean().optional(),
+    star: z.boolean().optional(),
 	}),
 });
 
@@ -84,6 +87,8 @@ const archive = defineCollection({
 		publisher: z.string().optional(),
 		// Advanced: Validate that the string is also a URL
 		url: z.string().url().optional(),
+    featured: z.boolean().optional(),
+    star: z.boolean().optional(),
 	}),
 });
 

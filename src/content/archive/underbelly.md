@@ -98,6 +98,8 @@ accolades:
       2009
     url: >-
       http://mamsie.org/2009/01/mums-the-word-the-maternal-in-contemporary-literaturede-montfort-university-leicester/
+featured: true
+star: true
 ---
 
 

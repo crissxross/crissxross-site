@@ -31,8 +31,8 @@ accolades:
     url: http://dtc-wsuv.org/wp/pathfinders/exhibit/
   - name: "'Words Unstable On The Table' exhibition, E-Poetry 2013, London, UK"
     url: https://www.watermans.org.uk/new-media-arts-archive/words-unstable-on-the-table-2013/
+featured: true
 ---
-
 
 A first-person 3D video-game and coming-of-age story about a contemporary teenage girl. She's connected, clued-in and canny but what lurks in the deepest darkest regions beyond the screen?
 
