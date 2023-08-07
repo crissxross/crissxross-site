@@ -10,7 +10,7 @@
   --tracking-s: -0.075ch;
   /* for using with width (not max-width) in .wrapper utility - see info there */
   --wrapper-width: clamp(16rem, 93vw, 85rem);
-  --measure: 60ch;
+  --measure: 65ch;
 }
 
 /* TODO: Do I need --tracking ??? */

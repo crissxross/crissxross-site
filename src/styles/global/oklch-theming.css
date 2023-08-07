@@ -1,5 +1,7 @@
 /* Using Open Props okLCH beta color palettes - https://nerdy.dev/open-props-oklch-palettes-beta */
 
+/* TODO: brand colors (--color-hue), accent colors, supporting colors, neutrals (--gray-hue) */
+
 :root {
   color-scheme: light dark;
 }
