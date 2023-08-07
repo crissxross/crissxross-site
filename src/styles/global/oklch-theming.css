@@ -1,7 +1,7 @@
 /* Using Open Props okLCH beta color palettes - https://nerdy.dev/open-props-oklch-palettes-beta */
 
 :root {
-  color-scheme: dark light;
+  color-scheme: light dark;
 }
 
 * {
@@ -13,44 +13,23 @@
   --gray-chroma: .015;
 }
 
-/* DARK default */
+/* LIGHT DEFAULT */
 html {
-  --text-1: var(--color-0);
-  --text-2: var(--color-1);
-  --surface-1: var(--gray-14);
-  --surface-2: var(--gray-13);
-  --surface-3: var(--gray-12);
-  --surface-4: var(--gray-11);
+  --text-1: var(--color-15);
+  --text-2: var(--color-14);
+  --surface-1: var(--gray-0);
+  --surface-2: var(--gray-1);
+  --surface-3: var(--gray-2);
+  --surface-4: var(--gray-3);
 
-  --link-color: var(--color-3);
+  --link-color: var(--color-8);
   accent-color: var(--color-bright);
-
-  /* DARK THEME UTILITIES */
-
-  & .surface-reversed {
-    background-color: var(--gray-1);
-    color: var(--color-15);
-    --link-color: var(--color-8);
-  }
 
   & .secondary {
     --color-hue: var(--hue-secondary);
     --gray-hue: var(--hue-secondary);
     --gray-chroma: .01;
 
-    --text-1: var(--color-0);
-    --text-2: var(--color-1);
-    --surface-1: var(--gray-14);
-    --surface-2: var(--gray-13);
-    --surface-3: var(--gray-12);
-    --surface-4: var(--gray-11);
-
-    --link-color: var(--color-3);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  html {
     --text-1: var(--color-15);
     --text-2: var(--color-14);
     --surface-1: var(--gray-0);
@@ -59,26 +38,71 @@ html {
     --surface-4: var(--gray-3);
 
     --link-color: var(--color-8);
+  }
 
-    /* LIGHT THEME UTILITIES */
+  /* LIGHT THEME UTILITIES */
+  & .surface-reversed {
+    background-color: var(--gray-14);
+    color: var(--color-0);
+    --link-color: var(--color-3);
+  }
+}
 
-    & .surface-reversed {
-      background-color: var(--gray-14);
-      color: var(--color-0);
+@media (prefers-color-scheme: dark) {
+  html {
+    --text-1: var(--color-0);
+    --text-2: var(--color-1);
+    --surface-1: var(--gray-14);
+    --surface-2: var(--gray-13);
+    --surface-3: var(--gray-12);
+    --surface-4: var(--gray-11);
+
+    --link-color: var(--color-3);
+
+    & .secondary {
+      --text-1: var(--color-0);
+      --text-2: var(--color-1);
+      --surface-1: var(--gray-14);
+      --surface-2: var(--gray-13);
+      --surface-3: var(--gray-12);
+      --surface-4: var(--gray-11);
+
       --link-color: var(--color-3);
     }
 
-    & .secondary {
-      --text-1: var(--color-15);
-      --text-2: var(--color-14);
-      --surface-1: var(--gray-0);
-      --surface-2: var(--gray-1);
-      --surface-3: var(--gray-2);
-      --surface-4: var(--gray-3);
-
+    /* DARK THEME UTILITIES */
+    & .surface-reversed {
+      background-color: var(--gray-1);
+      color: var(--color-15);
       --link-color: var(--color-8);
     }
   }
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --text-1: var(--color-15);
+  --text-2: var(--color-14);
+  --surface-1: var(--gray-0);
+  --surface-2: var(--gray-1);
+  --surface-3: var(--gray-2);
+  --surface-4: var(--gray-3);
+
+  --link-color: var(--color-8);
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --text-1: var(--color-0);
+  --text-2: var(--color-1);
+  --surface-1: var(--gray-14);
+  --surface-2: var(--gray-13);
+  --surface-3: var(--gray-12);
+  --surface-4: var(--gray-11);
+
+  --link-color: var(--color-3);
 }
 
 
@@ -111,9 +135,7 @@ html {
 }
 
 
-
-
-/* FOR REFERENCE ONLY */
+/* FOR REFERENCE ONLY Open Props named props */
 /*
 --hue-red: 25;
 --hue-pink: 350;

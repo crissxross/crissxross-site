@@ -9,7 +9,8 @@
 html {
 	display: grid;
 	min-height: 100%;
-	background: var(--surface-1);
+	/* background: var(--surface-1); */
+  background: var(--gray-14);
 	color: var(--text-1);
 }
 
@@ -27,7 +28,7 @@ body {
 }
 
 main {
-	padding-block: var(--space-l);
+	padding-block: var(--space-s);
 }
 
 h1 {
@@ -68,6 +69,12 @@ h6,
 li,
 figcaption {
   max-width: var(--measure);
+}
+
+article {
+  background-color: var(--surface-1);
+  padding: var(--space-m);
+  border-radius: var(--border-radius);
 }
 
 blockquote {

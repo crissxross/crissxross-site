@@ -13,9 +13,15 @@ const archive = (await getCollection('archive')).sort(
 // TODO: filter the archive collection to include only featured works
 ---
 
+<style>
+  h1, h2, h3 {
+    color: var(--color-2);
+  }
+</style>
+
 <BaseLayout>
 	<main>
-    <article class="wrapper flow">
+    <div class="wrapper flow">
       <h1>Creative work by Christine Wilks</h1>
       <section class="flow">
         <h2>New release!</h2>
@@ -33,7 +39,7 @@ const archive = (await getCollection('archive')).sort(
           }
         </ul>
       </section>
-    </article>
+    </div>
 	</main>
 </BaseLayout>
 
