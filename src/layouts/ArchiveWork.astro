@@ -6,7 +6,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'archive'>['data'];
 
-const { title, description, releaseDate } = Astro.props;
+const { title, description, releaseDate, accolades, awards, youtubeVideos, images } = Astro.props;
 ---
 
 <SingleLayout>
@@ -20,5 +20,42 @@ const { title, description, releaseDate } = Astro.props;
   </p>
   <p>{description}</p>
   <hr />
+  {
+    youtubeVideos && (
+      <div class="video-container">
+        {
+          youtubeVideos?.map((video) => (
+            <iframe
+              width="560"
+              height="315"
+              src={`https://www.youtube-nocookie.com/embed/${video.id}`}
+              title={video.name}
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          ))
+        }
+      </div>
+    )
+  }
   <slot />
+  { awards && <h2 class="step-2">Awards</h2> }
+  <ul>
+  {
+    awards &&
+      awards?.map((award) => (
+        <li><a href={award.url}>{award.name}</a></li>
+      ))
+  }
+  </ul>
+  <h2 class="step-2">Publications, exhibitions & performances</h2>
+  <ul>
+  {
+    accolades &&
+      accolades?.map((accolade) => (
+        <li><a href={accolade.url}>{accolade.name}</a></li>
+      ))
+  }
+  </ul>
 </SingleLayout>

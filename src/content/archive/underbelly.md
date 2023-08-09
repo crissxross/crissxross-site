@@ -25,7 +25,7 @@ publisher: >-
   8, Spring 2011.
 awards:
   - name: Winner of the New Media Writing Prize 2010
-    url: 'http://newmediawritingprize.co.uk/?page_id=350'
+    url: 'https://newmediawritingprize.co.uk/archive/?tx_category=winner&prize-year=2010'
   - name: Winner of the MaMSIE Digital Media Competition 2010/11
     url: 'http://www.mamsie.bbk.ac.uk/articles/10.16995/sim.148/'
 accolades:
@@ -102,6 +102,7 @@ featured: true
 star: true
 ---
 
+<!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/h3WcjF8aZqM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
 
 An award-winning playable story about a woman sculptor, carving on the site of a former colliery in the north of England. As she carves, she is disturbed by a medley of voices, some from the site's dark industrial past, and the player/reader is plunged into an underworld of repressed fears and desires.
 

@@ -22,7 +22,10 @@ const today = new Date();
     <a href={`/archive/${slug}/`}>{data.title}</a>
   </h2>
   <p>{ data.description }</p>
+  <footer>
   {
-    <FormattedDate date={data.releaseDate} option='y' />
+    <FormattedDate date={data.releaseDate} option='y'/>
   }
+  <small>{data.tech}</small>
+  </footer>
 </article>
