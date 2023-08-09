@@ -10,7 +10,7 @@ const { data, slug } = Astro.props.work;
 const today = new Date();
 ---
 
-<div class="card flow">
+<article class="card flow">
   <h2>
     <a href={`/works/${slug}/`}>{data.title}</a>
   </h2>
@@ -26,4 +26,4 @@ const today = new Date();
       )
     }
   </p>
-</div>
+</article>

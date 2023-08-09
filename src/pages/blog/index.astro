@@ -10,15 +10,14 @@ const posts = (await getCollection('blog')).sort(
 
 <BaseLayout>
 	<main class="wrapper">
-		<section>
-			<ul role="list" class="flow">
-				{
-					posts.map((post) => (
-            <CardBlog post={post} />
-					))
-				}
-			</ul>
-		</section>
+    <h1 data-theme='dark'>Blog posts</h1>
+    <ul role="list" class="flow">
+      {
+        posts.map((post) => (
+          <CardBlog post={post} />
+        ))
+      }
+    </ul>
 	</main>
 </BaseLayout>
 

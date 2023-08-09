@@ -71,6 +71,10 @@ figcaption {
   max-width: var(--measure);
 }
 
+:is(h1, h2, h3, h4, h5, h6)[data-theme='dark'] {
+  color: var(--color-2)
+}
+
 article {
   background-color: var(--surface-1);
   padding: var(--space-m);

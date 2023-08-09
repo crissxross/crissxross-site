@@ -10,17 +10,16 @@ const works = (await getCollection('works')).sort(
 
 <BaseLayout>
 	<main class="wrapper">
-		<section>
-			<ul role="list" class="flow">
-				{
-					works.map((work) => (
-						<li>
-							<CardWork work={work} />
-						</li>
-					))
-				}
-			</ul>
-		</section>
+    <h1 data-theme='dark'>Creative Works</h1>
+    <ul role="list" class="flow">
+      {
+        works.map((work) => (
+          <li>
+            <CardWork work={work} />
+          </li>
+        ))
+      }
+    </ul>
 	</main>
 </BaseLayout>
 

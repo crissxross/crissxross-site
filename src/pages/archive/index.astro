@@ -17,17 +17,16 @@ const archive = (await getCollection('archive')).sort(
 
 <BaseLayout>
 	<main>
-		<section>
-			<ul class="grid" data-rows="masonry" role="list">
-				{
-					archive.map((work) => (
-						<li>
-              <CardArchive work={work} />
-						</li>
-					))
-				}
-			</ul>
-		</section>
+    <h1 data-theme='dark'>Creative Archive</h1>
+    <ul class="grid" data-rows="masonry" role="list">
+      {
+        archive.map((work) => (
+          <li>
+            <CardArchive work={work} />
+          </li>
+        ))
+      }
+    </ul>
 	</main>
 </BaseLayout>
 
