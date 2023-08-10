@@ -2,7 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import SingleLayout from './SingleLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-
+import { YouTube } from '@astro-community/astro-embed-youtube';
 
 type Props = CollectionEntry<'archive'>['data'];
 
@@ -25,15 +25,7 @@ const { title, description, releaseDate, accolades, awards, youtubeVideos, image
       <div class="video-container">
         {
           youtubeVideos?.map((video) => (
-            <iframe class="youtube-video"
-              // width="560"
-              // height="315"
-              src={`https://www.youtube-nocookie.com/embed/${video.id}`}
-              title={video.name}
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+            <YouTube id={video.id} />
           ))
         }
       </div>

@@ -1,6 +1,0 @@
-/* for responsive embedded youtube videos - apply to iframe */
-
-.youtube-video {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-}
