@@ -74,6 +74,7 @@ youtubeVideos:
     name: WaterDragon
   - id: 4ZjtLtd7mHE
     name: End of the Rainbow
+imageStrip: '/archive/crissxross-trail-remixworx-1.png'
 images:
   - ''
 releaseDate: '2012'

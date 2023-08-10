@@ -21,6 +21,16 @@ const today = new Date();
   <h2>
     <a href={`/archive/${slug}/`}>{data.title}</a>
   </h2>
+  {
+    data.imageStrip && (
+      <img src={data.imageStrip} alt={data.title} />
+    )
+  }
+  {
+    data.imageThumb && (
+      <img src={data.imageThumb} alt={data.title} />
+    )
+  }
   <p>{ data.description }</p>
   {
     data.collaborators && <small>{data.collaborators}</small>

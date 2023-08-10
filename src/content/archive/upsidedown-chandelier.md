@@ -9,6 +9,7 @@ author: Christine Wilks
 youtubeVideos:
   - id: ypAUiOTRkZQ
     name: Upsidedown Chandelier
+imageStrip: '/archive/upsidedown-chandelier.png'
 images:
   - ''
 releaseDate: '2013'

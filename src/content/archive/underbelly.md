@@ -10,6 +10,7 @@ author: Christine Wilks
 youtubeVideos:
   - id: h3WcjF8aZqM
     name: Underbelly screencast
+imageStrip: '/archive/underbelly.png'
 images:
   - ''
 releaseDate: '2010'

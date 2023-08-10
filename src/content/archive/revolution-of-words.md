@@ -8,6 +8,7 @@ description: >-
 author: Christine Wilks
 url: 'http://crissxross.github.io/RevolOWords/'
 youtubeVideos: []
+imageStrip: '/archive/revolutionwords.png'
 images:
   - ''
 releaseDate: '2013'

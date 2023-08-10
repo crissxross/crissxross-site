@@ -7,6 +7,7 @@ description: >-
 author: Christine Wilks
 url: https://dreamingmethods.com/portfolio/inkubus/
 youtubeVideos: []
+imageStrip: '/archive/inkubus.png'
 images:
   - ""
 releaseDate: "2014"

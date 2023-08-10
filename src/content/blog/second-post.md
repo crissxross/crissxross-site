@@ -3,7 +3,7 @@ title: 'Second post'
 description: 'Lorem ipsum dolor sit amet'
 author: Christine Wilks
 pubDate: '12 Jul 2023'
-heroImage: '../../assets/placeholder-hero.jpg'
+heroImage: '/placeholder-hero.jpg'
 heroImageAlt: 'A placeholder hero image'
 draft: true
 ---

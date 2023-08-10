@@ -10,6 +10,7 @@ author: Christine Wilks
 youtubeVideos:
   - id: q8z5YIJIedw
     name: Tailspin screencast
+imageStrip: '/archive/tailspin.png'
 images:
   - ''
 releaseDate: '2008'

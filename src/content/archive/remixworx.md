@@ -9,6 +9,7 @@ description: >-
 author: Christine Wilks
 url: 'http://remixworx.com'
 youtubeVideos: []
+imageStrip: '/archive/remixworx.png'
 images:
   - ''
 releaseDate: '2007'

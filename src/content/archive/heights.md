@@ -7,6 +7,7 @@ author: Christine Wilks
 youtubeVideos:
   - id: Ho-ZhEbchTw
     name: Heights
+imageThumb: '/archive/heights-thumb.png'
 images:
   - ''
 releaseDate: '2006'

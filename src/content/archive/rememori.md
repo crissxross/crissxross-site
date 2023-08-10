@@ -9,6 +9,7 @@ author: Christine Wilks
 youtubeVideos:
   - id: 4eKCgQ85rh8
     name: Rememori
+imageStrip: '/archive/rememori.png'
 images:
   - ''
 releaseDate: '2011'

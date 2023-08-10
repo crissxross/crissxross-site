@@ -7,6 +7,7 @@ author: Christine Wilks
 youtubeVideos:
   - id: a_Zzqbhrrpc
     name: Social Dis-Ease
+imageThumb: '/archive/socialdis-ease-thumb.png'
 images:
   - ''
 releaseDate: '2004'

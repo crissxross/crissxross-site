@@ -5,6 +5,7 @@ description: >-
   This interactive and whimisical 'Hypertext' was my first creative work for the web, combining text, image and sound. (AKA Sitting Pretty)
 author: Christine Wilks
 youtubeVideos: []
+imageThumb: '/archive/beforewebegin-thumb.png'
 images:
   - ''
 releaseDate: '2004'
