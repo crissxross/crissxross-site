@@ -4,7 +4,8 @@ description: 'Lorem ipsum dolor sit amet'
 author: Christine Wilks
 pubDate: '15 Jul 2023'
 updatedDate: '17 jul 2023'
-heroImage: '/placeholder-hero.jpg'
+heroImage: '../../assets/placeholder-hero.jpg'
+heroImageAlt: 'A placeholder hero image'
 draft: true
 ---
 

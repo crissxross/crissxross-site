@@ -2,7 +2,7 @@ import { defineCollection, z } from 'astro:content';
 
 const blog = defineCollection({
 	// Type-check frontmatter using a schema
-	schema: z.object({
+	schema: ({image}) => z.object({
 		title: z.string(),
 		description: z.string(),
 		author: z.string(),
@@ -15,8 +15,13 @@ const blog = defineCollection({
 			.string()
 			.optional()
 			.transform((str) => (str ? new Date(str) : undefined)),
-		heroImage: z.string().optional(),
     draft: z.boolean().optional(),
+    // FIXME: why is heroImage not working?
+    // cover image preferably at least 1080px wide
+    heroImage: image().refine((img) => img.width >= 720, {
+      message: "Cover image must be at least 720 pixels wide!",
+    }).optional(),
+    heroImageAlt: z.string().optional(),
 	}),
 });
 
