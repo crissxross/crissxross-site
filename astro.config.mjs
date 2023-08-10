@@ -9,7 +9,7 @@ export default defineConfig({
 		mdx(),
 		sitemap(),
 	],
-  experimental: {
-    assets: true
-   }
+  // experimental: {
+  //   assets: true
+  //  }
 });
