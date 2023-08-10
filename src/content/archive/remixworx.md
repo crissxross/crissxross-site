@@ -12,7 +12,7 @@ youtubeVideos: []
 images:
   - ''
 releaseDate: '2007'
-releasePeriod: to 2013
+lastReleaseDate: '2013'
 tech: various media
 tags:
   - showcase

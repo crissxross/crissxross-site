@@ -64,7 +64,10 @@ const archive = defineCollection({
 			.string()
 			.or(z.date())
 			.transform((val) => new Date(val)),
-		releasePeriod: z.string().optional(),
+		lastReleaseDate: z
+			.string()
+			.or(z.date())
+			.transform((val) => new Date(val)).optional(),
 		tech: z.string().optional(),
 		image: z.object({
       src: z.string(),

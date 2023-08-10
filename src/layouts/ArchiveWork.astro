@@ -6,7 +6,7 @@ import { YouTube } from '@astro-community/astro-embed-youtube';
 
 type Props = CollectionEntry<'archive'>['data'];
 
-const { title, description, releaseDate, accolades, awards, youtubeVideos, image } = Astro.props;
+const { title, description, releaseDate, lastReleaseDate, accolades, awards, youtubeVideos, image, collaborators } = Astro.props;
 ---
 
 <SingleLayout>
@@ -17,19 +17,22 @@ const { title, description, releaseDate, accolades, awards, youtubeVideos, image
         <FormattedDate date={releaseDate} option='y' />
       )
     }
+    {
+      lastReleaseDate && (
+        <span> &ndash; <FormattedDate date={lastReleaseDate} option='y' /></span>
+      )
+    }
   </p>
+    {
+      collaborators && <p>{collaborators}</p>
+    }
   <p>{description}</p>
-  <hr />
+  <!-- <hr /> -->
   {
-    youtubeVideos && (
+    youtubeVideos && youtubeVideos.length > 0 &&
       <div class="video-container">
-        {
-          youtubeVideos?.map((video) => (
-            <YouTube id={video.id} />
-          ))
-        }
+        <YouTube id={youtubeVideos[0].id} />
       </div>
-    )
   }
   <slot />
   { awards && <h2 class="step-2">Awards</h2> }
@@ -42,6 +45,7 @@ const { title, description, releaseDate, accolades, awards, youtubeVideos, image
   }
   </ul>
   <h2 class="step-2">Publications, exhibitions & performances</h2>
+  <p>Some of the places where <cite>{title}</cite> has appeared:</p>
   <ul>
   {
     accolades &&
