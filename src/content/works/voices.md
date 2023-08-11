@@ -5,6 +5,9 @@ description: >-
   An interactive digital fiction for body image bibliotherapy, the practice of reading for mental health and well-being. Hayley, the main character, struggles with negative self-talk. She has body image issues relating to her size and shape. Her friends, a diverse cast of characters who have issues of their own, try to support her. Their interactions touch on how the wider cultural context contributes to body dissatisfaction, which is so common in the Western world, that it has become the norm among women and girls.
 author: Christine Wilks
 releaseDate: 10 July 2023
+image:
+  src: '/Voices-screenshot-sc7.png'
+  alt: A screenshot of a scene in Voices
 tech: web app
 tags:
   - projects

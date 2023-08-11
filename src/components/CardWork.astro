@@ -10,11 +10,28 @@ const { data, slug } = Astro.props.work;
 const today = new Date();
 ---
 
-<article class="card flow">
-  <h2>
-    <a href={`/works/${slug}/`}>{data.title}</a>
-  </h2>
-  <p>{ data.description }</p>
+<style>
+  .card {
+    display: grid;
+    gap: var(--space-xs);
+    --measure: 60ch;
+  }
+</style>
+
+<article class="card">
+  <div class="grid" data-layout="50-50">
+    <div class="flow">
+      <h2>
+        <a href={`/works/${slug}/`}>{data.title}</a>
+      </h2>
+      <p>{ data.description }</p>
+    </div>
+    {
+      data.image && (
+        <img src={data.image.src} alt={data.image.alt} />
+      )
+    }
+  </div>
   <p>
     {
       data.releaseDate && data.releaseDate < today ?

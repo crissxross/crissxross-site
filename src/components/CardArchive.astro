@@ -41,13 +41,13 @@ const today = new Date();
   </h2>
   {
     data.imageStrip && (
-      <img src={data.imageStrip} alt={data.title} class="strip" />
+      <img src={data.imageStrip} alt="" class="strip" />
     )
   }
   <div>
     {
       data.imageThumb && (
-        <img src={data.imageThumb} alt={data.title} class="thumb" />
+        <img src={data.imageThumb} alt="" class="thumb" />
       )
     }
     <p>{ data.description }</p>

@@ -6,14 +6,17 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'works'>['data'];
 
-const { title, description, releaseDate } = Astro.props;
+const { title, description, releaseDate, image } = Astro.props;
 const today = new Date();
 ---
 
 <style>
-	span {
+	.wip {
 		font-style: italic;
 	}
+  img {
+    margin-inline: auto;
+  }
 </style>
 
 <SingleLayout>
@@ -25,10 +28,15 @@ const today = new Date();
       (
         <FormattedDate date={releaseDate} option='m-y' />
       ):
-      <span>Work in progress</span>
+      <span class="wip">Work in progress</span>
     }
   </p>
   <p>{description}</p>
-  <hr />
+  <!-- <hr /> -->
+  {
+    image && (
+      <img src={image.src} alt={image.alt} />
+    )
+  }
   <slot />
 </SingleLayout>
