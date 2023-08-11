@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "./FormattedDate.astro";
+import Button from "./Button.astro";
 
 interface Props {
   post: CollectionEntry<'blog'>;
@@ -23,4 +24,10 @@ const today = new Date();
   </h2>
   <FormattedDate date={data.pubDate} />
   <p>{data.description}</p>
+  <a href={`/blog/${slug}`}>
+    <Button theme="primary">
+      Read more
+    </Button>
+  </a>
+  <a class="button" href={`/blog/${slug}`}>Read more link</a>
 </article>

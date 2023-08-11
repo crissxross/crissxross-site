@@ -2,6 +2,8 @@
 
 /* TODO: brand colors (--color-hue), accent colors, supporting colors, neutrals (--gray-hue) */
 
+/* TODO: add BUTTON colors to light & dark themes for use with Button.astro component */
+
 :root {
   color-scheme: light dark;
 }
@@ -26,6 +28,8 @@ html {
 
   --link-color: var(--color-8);
   accent-color: var(--color-bright);
+
+  --btn-text: var(--color-0);
 
   & .secondary {
     --color-hue: var(--hue-secondary);
@@ -60,6 +64,8 @@ html {
     --surface-4: var(--gray-11);
 
     --link-color: var(--color-3);
+
+    --btn-text: var(--color-14);
 
     & .secondary {
       --text-1: var(--color-0);

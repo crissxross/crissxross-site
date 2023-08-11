@@ -13,6 +13,7 @@
 
 /* BLOCKS */
 @import 'blocks/card.css';
+@import 'blocks/button.css';
 @import 'blocks/prose.css';
 @import 'blocks/section.css';
 
