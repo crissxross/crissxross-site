@@ -17,7 +17,7 @@ tags:
   - showcase
   - remixworx
 displayType: major
-collaborators: My last collaboration with Randy Adams (1951-2014).
+collaborators: My final collaboration with Randy Adams (1951-2014).
 publisher: remixworx
 moreinfo: >-
   In memory of Randy, aka runran. The concept was his and he wrote the text

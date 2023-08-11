@@ -1,7 +1,7 @@
 ---
-title: R3M1XW0RX
+title: Remixworx
 description: >-
-  Remixworx was a collaborative creative space for remixing visual poetry,
+  Remixworx (aka R3M1XW0RX) was a collaborative creative space for remixing visual poetry,
   e-poetry, playable media, animation, art, music, spoken word, texts and
   more. Initiated by Randy Adams (1951-2014) in 2006, it grew to number more
   than 500 individual creative works. I was an active member from 2007 to 2013
@@ -19,10 +19,10 @@ tags:
   - showcase
   - remixworx
 displayType: major
-collaborators: In collaboration with the R3M1XW0RX collective.
-publisher: R3M1XW0RX
+collaborators: In collaboration with the Remixworx collective.
+publisher: Remixworx
 moreinfo: >-
-  R3M1XW0RX is a tribute to the creativity, generosity and unique spirit of
+  Remixworx is a tribute to the creativity, generosity and unique spirit of
   Randy Adams, aka runran, (1951-2014).
 accolades:
   - name: 'ELMCIP Conference on Remediating the Social, Edinburgh, UK, 2012'
@@ -42,5 +42,5 @@ accolades:
 
 Remixworx was a collaborative creative space for remixing visual poetry, e-poetry, playable media, animation, art, music, spoken word, texts and more. Initiated by Randy Adams (1951-2014) in 2006, it grew to number more than 500 individual creative works. I was an active member from 2007 to 2013 and contributed more than 100 works, mainly in Flash.
 
-R3M1XW0RX is a tribute to the creativity, generosity and unique spirit of Randy Adams, aka runran, (1951-2014).
+Remixworx is a tribute to the creativity, generosity and unique spirit of Randy Adams, aka runran, (1951-2014).
 

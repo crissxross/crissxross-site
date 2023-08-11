@@ -1,5 +1,5 @@
 ---
-title: A crissxross trail < R3M1XW0RX
+title: A crissxross trail < Remixworx
 description: >-
   Conceived as a poetic interactive infographic full of multimedia animated
   content, this 'scenic route' through Remixworx presents a sample trail of 33
@@ -78,7 +78,7 @@ imageStrip: '/archive/crissxross-trail-remixworx-1.png'
 images:
   - ''
 releaseDate: '2012'
-tech: HTML & video (originally included Flash)
+tech: HTML & video (originally Flash also)
 tags:
   - showcase
   - remixworx
@@ -86,7 +86,7 @@ displayType: major
 collaborators: ''
 publisher: ''
 moreinfo: >-
-  The R3M1XW0RX site hosts more than 500 remixes of digital art, animation,
+  The Remixworx site hosts more than 500 remixes of digital art, animation,
   sound, music, poetry and writing.
 accolades:
   - name: >-
@@ -102,4 +102,4 @@ featured: true
 
 Conceived as a poetic interactive infographic full of multimedia animated content, this 'scenic route' through Remixworx presents a sample trail of 33 of my remixes with personal commentary. Remixworx was an online collaborative creative project and this trail represents about one third of the remixes I created for it.
 
-The R3M1XW0RX site hosts more than 500 remixes of digital art, animation, sound, music, poetry and writing.
+The Remixworx site hosts more than 500 remixes of digital art, animation, sound, music, poetry and writing.
