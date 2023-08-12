@@ -9,7 +9,7 @@
 @import "https://unpkg.com/open-props/gray-oklch.min.css";
 @import 'global/oklch-theming.css';
 @import 'global/variables.css';
-@import 'global/global-styles.css';
+@import 'global/elements.css';
 
 /* BLOCKS */
 @import 'blocks/card.css';
