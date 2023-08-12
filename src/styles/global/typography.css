@@ -1,4 +1,6 @@
 :root {
+  --ff-recursive: 'Recursive', monospace;
+
   /* font list handled by postcss-preset-env plugin */
   --ff-system: system-ui;
 

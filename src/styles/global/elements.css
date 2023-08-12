@@ -5,9 +5,17 @@
   project: https://cube.fyi/css.html
 */
 
+/* RECURSIVE AXIS RANGES
+"MONO" 0 - 1 (decimals
+"CASL" 0 - 1 (decimals)
+"wght" 300 - 1000
+"sint" -15 - 0 (0 = normal)
+"CRSV" 0 off, 0.5 auto, 1 on
+*/
+
 /* Full-screen container with header & footer technique using html & body from Temani Afif - https://verpex.com/blog/website-tips/modern-layouts-using-css-grid */
 html {
-	display: grid;
+  display: grid;
 	min-height: 100%;
 	/* background: var(--surface-1); */
   background-color: var(--bg-surface);
@@ -15,9 +23,18 @@ html {
 }
 
 body {
-	display: grid;
+  display: grid;
 	grid-template-rows: auto 1fr auto;
-	font-family: var(--ff-system);
+	/* font-family: var(--ff-system); */
+  /* Recursive axes - defaults */
+  --MONO: 0.51;
+  --CASL: 0;
+  --wght: 400;
+  --slnt: 0;
+  --CRSV: 0.5;
+  font-family: var(--ff-recursive);
+  /* For Recursive... */
+  font-variation-settings: 'MONO' var(--MONO), 'CASL' var(--CASL), 'wght' var(--wght), 'slnt' var(--slnt), 'CRSV' var(--CRSV);
   font-size: var(--step-0);
   /* TODO - check scroll overflow */
 	/* to avoid scroll-based layout shifts */
@@ -28,11 +45,36 @@ body {
 }
 
 main {
-	padding-block: var(--space-s);
+	padding-block: var(--space-l-xl);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+  font-variation-settings: 'MONO' var(--MONO), 'CASL' var(--CASL), 'wght' var(--wght), 'slnt' var(--slnt), 'CRSV' var(--CRSV);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  --wght: 800;
+  line-height: 1;
+}
+
+p {
+  --MONO: 0;
 }
 
 h1, .step-5 {
   font-size: var(--step-5);
+  --wght: 900;
 }
 h2, .step-4 {
   font-size: var(--step-4);
@@ -48,15 +90,6 @@ h5, .step-1 {
 }
 h6, .step-0 {
   font-size: var(--step-0);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1;
 }
 
 p,
