@@ -24,10 +24,10 @@ const today = new Date();
   </h2>
   <FormattedDate date={data.pubDate} />
   <p>{data.description}</p>
-  <a href={`/blog/${slug}`}>
-    <Button theme="primary">
-      Read more
-    </Button>
+
+  <!-- TODO: TEMPORARY - just for testing -->
+  <a class="button" href={`/blog/${slug}`}>
+    Read more
+    <span class="visually-hidden">about {data.title}</span>
   </a>
-  <a class="button" href={`/blog/${slug}`}>Read more link</a>
 </article>

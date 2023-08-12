@@ -25,6 +25,7 @@ html {
   --surface-2: var(--gray-1);
   --surface-3: var(--gray-2);
   --surface-4: var(--gray-3);
+  --surface-5: var(--gray-4);
 
   --link-color: var(--color-8);
   accent-color: var(--color-bright);
@@ -62,6 +63,7 @@ html {
     --surface-2: var(--gray-13);
     --surface-3: var(--gray-12);
     --surface-4: var(--gray-11);
+    --surface-5: var(--gray-10);
 
     --link-color: var(--color-3);
 
@@ -96,6 +98,7 @@ html {
   --surface-2: var(--gray-1);
   --surface-3: var(--gray-2);
   --surface-4: var(--gray-3);
+  --surface-5: var(--gray-4);
 
   --link-color: var(--color-8);
 }
@@ -109,6 +112,7 @@ html {
   --surface-2: var(--gray-13);
   --surface-3: var(--gray-12);
   --surface-4: var(--gray-11);
+  --surface-5: var(--gray-10);
 
   --link-color: var(--color-3);
 }

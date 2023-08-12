@@ -37,7 +37,7 @@ const foreground = theme === "light" ? "var(--primary)" : "var(--light)";
 >
   :root {
     --primary: var(--link-color);
-    --secondary: var(--color-bright);
+    --secondary: teal;
     --accent: var(--color-bright);
     --light: var(--gray-0);
     --dark: var(--gray-14);
@@ -71,8 +71,8 @@ const foreground = theme === "light" ? "var(--primary)" : "var(--light)";
   }
 
   button:hover {
-    /* opacity: 0.8; */
     scale: 1.05;
+    filter: brightness(120%);
   }
 
   button:focus-visible {

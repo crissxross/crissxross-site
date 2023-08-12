@@ -4,14 +4,13 @@
   align-items: center;
   background-color: var(--link-color);
   color: var(--btn-text);
-  padding:  0.4em 1.25em;
+  padding:  0.625em 1.25em;
   border-radius: 0.25em;
   border: none;
   text-decoration: none;
   justify-self: start;
-  transition: box-shadow 0.2s cubic-bezier(0.075, 0.82, 0.165, 1),
-      opacity 0.2s cubic-bezier(0.075, 0.82, 0.165, 1),
-      scale 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: box-shadow 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+      /* outline 0.2s cubic-bezier(0.075, 0.82, 0.165, 1); */
 }
 
 .button:focus {
@@ -19,11 +18,16 @@
 }
 
 .button:hover {
-  background-color:  color-mix(in lch, var(--link-color), var(--color-bright) 30%);
-  /* scale: 1.05; */
-  outline: 1px solid var(--color-bright);
+  filter: brightness(110%);
+  outline: 2px solid var(--link-color);
+  outline-offset: -1px;
 }
 
 .button:focus-visible {
   box-shadow: 0 0 0 0.1em var(--surface-1), 0 0 0 0.3em var(--link-color);
 }
+
+/* TODO: remove PREVIOUS VERSION of .button transition */
+  /* transition: box-shadow 0.2s cubic-bezier(0.075, 0.82, 0.165, 1),
+      opacity 0.2s cubic-bezier(0.075, 0.82, 0.165, 1),
+      scale 0.2s cubic-bezier(0.075, 0.82, 0.165, 1); */

@@ -129,10 +129,6 @@ a {
 	}
 }
 
-a:has(Button) {
-  text-decoration: none;
-}
-
 /* TODO finish focus outline css variables */
 /* from S.Eckles - https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/ */
 :is(a, button, input, textarea, summary) {
