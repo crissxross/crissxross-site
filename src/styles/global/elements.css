@@ -10,7 +10,7 @@ html {
 	display: grid;
 	min-height: 100%;
 	/* background: var(--surface-1); */
-  background: var(--gray-14);
+  background-color: var(--bg-surface);
 	color: var(--text-1);
 }
 
@@ -117,7 +117,7 @@ a {
   color: var(--link-color);
 	&:hover,
 	&:focus {
-		text-decoration-thickness: 0.25em;
+		text-decoration-thickness: 0.2em;
 		text-underline-offset: 0.075em;
 		text-decoration-color: color-mix(
 			in oklab, var(--link-color), transparent 25%
@@ -185,4 +185,9 @@ pre {
 }
 pre > code {
 	all: unset;
+}
+
+mark {
+  /* background-color: oklch(90% 0.1 330); */
+  background-color: oklch(92% 0.13 193);
 }
