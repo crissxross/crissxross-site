@@ -26,7 +26,7 @@ body {
   display: grid;
 	grid-template-rows: auto 1fr auto;
   /* Recursive DEFAULT axes */
-  --MONO: 0.0;
+  --MONO: 0;
   --CASL: 0;
   --wght: 400;
   --slnt: 0;
@@ -37,6 +37,9 @@ body {
   font-size: var(--step-0);
 }
 
+/* Include any element where I want to alter the default Recursive axes */
+p,
+cite,
 h1,
 h2,
 h3,
@@ -44,6 +47,14 @@ h4,
 h5,
 h6 {
   font-variation-settings: 'MONO' var(--MONO), 'CASL' var(--CASL), 'wght' var(--wght), 'slnt' var(--slnt), 'CRSV' var(--CRSV);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   --MONO: 0.51;
   --wght: 800;
   line-height: 1.1;
@@ -149,6 +160,14 @@ a {
 	}
 }
 
+cite {
+  --slnt: -15;
+}
+
+small {
+	color: var(--text-2);
+}
+
 /* TODO finish focus outline css variables */
 /* from S.Eckles - https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/ */
 :is(a, button, input, textarea, summary) {
@@ -174,10 +193,6 @@ hr {
   The CSS below is from Astro blog starter template and is based off of Bear Blog's default CSS.
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
  */
-small {
-	color: var(--text-2);
-}
-
 input {
 	font-size: var(--step-0);
 }
