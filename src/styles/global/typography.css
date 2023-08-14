@@ -1,3 +1,11 @@
+/* RECURSIVE variable font AXIS RANGES
+"MONO" 0 - 1 (decimals
+"CASL" 0 - 1 (decimals)
+"wght" 300 - 1000
+"sint" -15 - 0 (0 = normal)
+"CRSV" 0 off, 0.5 auto, 1 on
+*/
+
 :root {
   --ff-recursive: 'Recursive', monospace;
 

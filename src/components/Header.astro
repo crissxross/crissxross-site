@@ -8,20 +8,25 @@ import { SITE_TITLE } from '../consts';
     --gutter: var(--space-3xs);
 		padding-block: var(--space-2xs);
     padding-inline: var(--space-xs);
-    color: var(--text-2);
 		/* background-color: var(--surface-2); */
     border-block-end: 1px solid var(--surface-4);
 	}
-	h2 {
-		font-size: var(--step-3);
+	h1 {
+    font-size: var(--step-3);
+    --wght: 800;
+
+    & a {
+      text-decoration: none;
+      color: var(--text-2);
+    }
 	}
 </style>
 
 <header data-theme="dark">
 	<div class="repel wrapper">
-		<h2>
-			{SITE_TITLE}
-		</h2>
+		<h1>
+      <a href="/">{SITE_TITLE}</a>
+		</h1>
 		<nav class="cluster">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/works">Creative Works</HeaderLink>
