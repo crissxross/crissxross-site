@@ -10,8 +10,8 @@ const works = (await getCollection('works')).sort(
 
 <BaseLayout>
 	<main class="wrapper flow">
-    <h1 data-theme='dark'>Creative Works</h1>
-    <p data-theme='dark'>I create digital fiction or interactive digital narratives (or playable stories). Here are my current projects.</p>
+    <h1>Creative Works</h1>
+    <p>I create digital fiction or interactive digital narratives (or playable stories). Here are my current projects.</p>
     <ul role="list" class="flow">
       {
         works.map((work) => (
@@ -21,7 +21,7 @@ const works = (await getCollection('works')).sort(
         ))
       }
     </ul>
-    <p data-theme='dark'>These days I build all my creative works using <a href="https://www.w3.org/standards/">open standard web technologies</a> : HTML, CSS & JavaScript. I used to create works in <a href="https://en.wikipedia.org/wiki/Adobe_Flash">Flash</a> before that technology was discontinued on the web. You can see video screencasts of my Flash works in my <a href="/archive">Archive.</a></p>
+    <p>These days I build all my creative works using <a href="https://www.w3.org/standards/">open standard web technologies</a> : HTML, CSS & JavaScript. I used to create works in <a href="https://en.wikipedia.org/wiki/Adobe_Flash">Flash</a> before that technology was discontinued on the web. You can see video screencasts of my Flash works in my <a href="/archive">Archive.</a></p>
 	</main>
 </BaseLayout>
 

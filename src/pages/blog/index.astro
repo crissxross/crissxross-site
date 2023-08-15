@@ -10,7 +10,7 @@ const posts = (await getCollection('blog')).sort(
 
 <BaseLayout>
 	<main class="wrapper">
-    <h1 data-theme='dark'>Blog posts</h1>
+    <h1>Blog posts</h1>
     <ul role="list" class="flow">
       {
         posts.map((post) => (
