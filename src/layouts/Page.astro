@@ -1,7 +1,7 @@
 ---
 import SingleLayout from './SingleLayout.astro';
 
-const { title, description, heroImage } = Astro.props.frontmatter;
+const { title, description, heroImage } = Astro.props.frontmatter || Astro.props;
 ---
 
 <style>

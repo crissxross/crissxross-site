@@ -19,6 +19,8 @@ I created the majority of my earlier works of interactive storytelling and playa
 
 I have a PhD in Digital Writing from Bath Spa University, an MA in Creative Writing and New Media from De Montfort University and an MA in Fine Art from Cardiff Institute of Higher Education.
 
+I'm a member of the [Electronic Literature Organization](https://eliterature.org/).
+
 ## Creative tech skills
 
 -   HTML, CSS & JavaScript

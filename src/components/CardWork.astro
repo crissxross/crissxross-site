@@ -14,12 +14,24 @@ const today = new Date();
   .card {
     display: grid;
     gap: var(--space-xs);
-    --measure: 60ch;
+    container: card / inline-size;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xs);
+  }
+  /* 60ch = 36rem, 36rem + 1rem * 2 padding = 38rem */
+  @container card (inline-size < 38rem) {
+    .content {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
 
 <article class="card">
-  <div class="grid" data-layout="50-50">
+  <!-- <div class="grid" data-layout="50-50"> -->
+  <div class="content">
     <div class="flow">
       <h2>
         <a href={`/works/${slug}/`}>{data.title}</a>
