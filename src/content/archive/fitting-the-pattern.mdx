@@ -69,10 +69,14 @@ star: true
 ---
 
 import VideoYouTube from '../../components/VideoYouTube.astro';
+import FlashScreencastCaption from '../../components/FlashScreencastCaption.astro';
 
-Cutting through memories, pinning down facts, stitching fabrications, unpicking the past - an interactive, animated memoir, exploring aspects of my relationship with my dressmaking mother.
+<FlashScreencastCaption title={frontmatter.title} />
 
-<h2 class="step-2"> Here's a video of a talk about <cite>Fitting the Pattern</cite></h2>
+{/* Cutting through memories, pinning down facts, stitching fabrications, unpicking the past - an interactive, animated memoir, exploring aspects of my relationship with my dressmaking mother. */}
+
+
+<h2 class="step-2"> Video of a talk about <cite>Fitting the Pattern</cite></h2>
 
 <VideoYouTube id={frontmatter.youtubeVideos[1].id} />
 

@@ -24,6 +24,6 @@ accolades:
 ---
 
 
-This interactive and whimisical 'Hypertext' was my first creative work for the web, combining text, image and sound.
+<!-- This interactive and whimisical 'Hypertext' was my first creative work for the web, combining text, image and sound.
 
-(AKA Sitting Pretty)
+(AKA Sitting Pretty) -->
