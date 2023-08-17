@@ -3,10 +3,9 @@ import type { CollectionEntry } from 'astro:content';
 import SingleLayout from './SingleLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 
-
 type Props = CollectionEntry<'works'>['data'];
 
-const { title, description, releaseDate, image } = Astro.props;
+const { title, description, releaseDate, image, url } = Astro.props;
 const today = new Date();
 ---
 
@@ -16,6 +15,10 @@ const today = new Date();
 	}
   img {
     margin-inline: auto;
+  }
+  .play {
+    display: grid;
+    place-content: center;
   }
 </style>
 
@@ -32,7 +35,13 @@ const today = new Date();
     }
   </p>
   <p>{description}</p>
-  <!-- <hr /> -->
+  {
+    url && (
+      <div class="play">
+        <a class="button" data-size="lg" href={url}>Play {title}</a>
+      </div>
+    )
+  }
   {
     image && (
       <img src={image.src} alt={image.alt} />

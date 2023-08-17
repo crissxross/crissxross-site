@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "./FormattedDate.astro";
+import { Icon } from 'astro-icon';
 
 interface Props {
   work: CollectionEntry<'works'>;
@@ -27,6 +28,10 @@ const today = new Date();
       grid-template-columns: 1fr;
     }
   }
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
 </style>
 
 <article class="card">
@@ -44,15 +49,22 @@ const today = new Date();
       )
     }
   </div>
-  <p>
+  <footer>
+    <div>
+      {
+        data.releaseDate && data.releaseDate < today ?
+        (
+          <FormattedDate date={data.releaseDate} option='m-y' />
+        ) :
+        (
+          <span>work in progress</span>
+        )
+      } <small>{data.tech}</small>
+    </div>
     {
-      data.releaseDate && data.releaseDate < today ?
-      (
-        <FormattedDate date={data.releaseDate} option='m-y' />
-      ) :
-      (
-        <span>work in progress</span>
+      data.url && (
+        <div><a class="button" href={data.url}>Play {data.title} <Icon name="mdi:launch" /> </a></div>
       )
-    } <small>{data.tech}</small>
-  </p>
+    }
+  </footer>
 </article>

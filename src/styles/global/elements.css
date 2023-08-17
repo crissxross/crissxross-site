@@ -39,6 +39,7 @@ body {
 
 /* Include any element where you want to alter any Recursive axes */
 p,
+a,
 cite,
 em,
 strong,

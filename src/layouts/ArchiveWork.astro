@@ -6,8 +6,15 @@ import { YouTube } from '@astro-community/astro-embed-youtube';
 
 type Props = CollectionEntry<'archive'>['data'];
 
-const { title, description, releaseDate, lastReleaseDate, accolades, awards, youtubeVideos, image, collaborators } = Astro.props;
+const { title, description, releaseDate, lastReleaseDate, accolades, awards, youtubeVideos, image, collaborators, url } = Astro.props;
 ---
+
+<style>
+  .play {
+    display: grid;
+    place-content: center;
+  }
+</style>
 
 <SingleLayout>
   <h1 class="title">{title}</h1>
@@ -27,6 +34,13 @@ const { title, description, releaseDate, lastReleaseDate, accolades, awards, you
       collaborators && <p>{collaborators}</p>
     }
   <p>{description}</p>
+  {
+    url && (
+      <div class="play">
+        <a class="button" data-size="lg" href={url}>Play {title}</a>
+      </div>
+    )
+  }
   <!-- <hr /> -->
   {
     youtubeVideos && youtubeVideos.length > 0 &&
