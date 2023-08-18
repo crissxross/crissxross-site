@@ -45,6 +45,7 @@ em,
 strong,
 blockquote,
 figcaption,
+summary,
 h1,
 h2,
 h3,
@@ -168,6 +169,23 @@ em {
 
 strong {
   --wght: 700;
+}
+
+details {
+  background-color: var(--surface-2);
+  border: 2px solid var(--color-2);
+  border-radius: 4px;
+  padding: 0.5em;
+}
+details > summary {
+  --wght: 600;
+}
+details > p {
+  padding-block-start: 0.625em;
+}
+details[open] {
+  background-color: var(--surface-2);
+  /* padding: 0.5em; */
 }
 
 /* from Andy Bell's personal-site-eleventy */

@@ -5,7 +5,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'works'>['data'];
 
-const { title, description, releaseDate, image, url } = Astro.props;
+const { title, description, releaseDate, image, url, accolades } = Astro.props;
 const today = new Date();
 ---
 
@@ -20,6 +20,19 @@ const today = new Date();
     display: grid;
     place-content: center;
   }
+  /* details {
+    background-color: var(--surface-2);
+    border: 1px solid var(--surface-3);
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+  } */
+  summary {
+    font-size: var(--step-2);
+    /* --wght: 600; */
+  }
+  /* details[open] {
+    padding: 0.5em;
+  } */
 </style>
 
 <SingleLayout>
@@ -47,5 +60,17 @@ const today = new Date();
       <img src={image.src} alt={image.alt} />
     )
   }
+  <details>
+    <summary>Publications, exhibitions & performances</summary>
+    <p>Some of the places where <cite>{title}</cite> has been published, exhibited or performed:</p>
+    <ul>
+    {
+      accolades &&
+        accolades?.map((accolade) => (
+          <li><a href={accolade.url}>{accolade.name}</a></li>
+        ))
+    }
+    </ul>
+  </details>
   <slot />
 </SingleLayout>
