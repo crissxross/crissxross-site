@@ -1,15 +1,22 @@
 ---
 import { YouTube } from '@astro-community/astro-embed-youtube';
+import FlashScreencastCaption from './FlashScreencastCaption.astro';
 
 interface Props {
   id: string;
   name?: string;
+  title?: string;
 }
 
-const { id, name } = Astro.props;
+const { id, name, title } = Astro.props;
 ---
 
 <YouTube id={id} />
-
-<p>{name}</p>
+{
+  title &&
+  <FlashScreencastCaption title={title} />
+}
+{
+  name && <p>{name}</p>
+}
 

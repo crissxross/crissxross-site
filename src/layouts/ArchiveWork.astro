@@ -2,7 +2,8 @@
 import type { CollectionEntry } from 'astro:content';
 import SingleLayout from './SingleLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-import { YouTube } from '@astro-community/astro-embed-youtube';
+import VideoYouTube from '../components/VideoYouTube.astro';
+
 
 type Props = CollectionEntry<'archive'>['data'];
 
@@ -45,7 +46,7 @@ const { title, description, releaseDate, lastReleaseDate, accolades, awards, you
   {
     youtubeVideos && youtubeVideos.length > 0 &&
       <div class="video-container">
-        <YouTube id={youtubeVideos[0].id} />
+        <VideoYouTube id={youtubeVideos[0].id} title={title} />
       </div>
   }
   <slot />
