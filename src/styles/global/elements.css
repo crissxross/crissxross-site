@@ -171,14 +171,15 @@ strong {
   --wght: 700;
 }
 
+ul {
+  padding-inline-start: 2em;
+}
+
 details {
   background-color: var(--surface-2);
   border: 2px solid var(--color-2);
   border-radius: 4px;
   padding: 0.5em;
-}
-details > summary {
-  --wght: 600;
 }
 details > p {
   padding-block-start: 0.625em;
@@ -186,6 +187,20 @@ details > p {
 details[open] {
   background-color: var(--surface-2);
   /* padding: 0.5em; */
+}
+details > summary {
+  cursor: pointer;
+  --wght: 600;
+  font-size: var(--step-1);
+
+  &:focus {
+    outline-color: transparent;
+  }
+
+  &:focus-visible {
+    outline-color: var(--link-color);
+    outline-offset: 0.6em;
+  }
 }
 
 /* from Andy Bell's personal-site-eleventy */
