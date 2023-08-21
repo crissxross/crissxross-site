@@ -19,13 +19,17 @@ const today = new Date();
   }
   .content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: var(--space-xs);
   }
   /* 60ch = 36rem, 36rem + 1rem * 2 padding = 38rem */
-  @container card (inline-size < 38rem) {
+  @container card (inline-size > 38rem) {
     .content {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-m);
+    }
+    img {
+      padding-block-start: var(--space-l);
     }
   }
   footer {

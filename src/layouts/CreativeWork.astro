@@ -15,6 +15,7 @@ const today = new Date();
 	}
   img {
     margin-inline: auto;
+    padding-block: var(--space-s);
   }
   .play {
     display: grid;
@@ -47,17 +48,21 @@ const today = new Date();
       <img src={image.src} alt={image.alt} />
     )
   }
-  <details>
-    <summary>Presentations & exhibitions</summary>
-    <p>Some of the places where <cite>{title}</cite> has been exhibited, presented or performed:</p>
-    <ul>
-    {
-      accolades &&
-        accolades?.map((accolade) => (
-          <li><a href={accolade.url}>{accolade.name}</a></li>
-        ))
-    }
-    </ul>
-  </details>
+  {
+    accolades && accolades.length > 0 && (
+      <details>
+        <summary>Presentations & exhibitions</summary>
+        <p>Some of the places where <cite>{title}</cite> has been exhibited, presented or performed:</p>
+        <ul>
+        {
+          accolades &&
+            accolades?.map((accolade) => (
+              <li><a href={accolade.url}>{accolade.name}</a></li>
+            ))
+        }
+        </ul>
+      </details>
+    )
+  }
   <slot />
 </SingleLayout>
