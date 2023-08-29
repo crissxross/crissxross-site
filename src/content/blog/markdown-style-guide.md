@@ -5,6 +5,7 @@ author: Christine Wilks
 pubDate: '02 Aug 2023'
 heroImage: '/placeholder-hero.jpg'
 heroImageAlt: 'A placeholder hero image'
+draft: true
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
