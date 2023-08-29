@@ -13,20 +13,25 @@ const archive = (await getCollection('archive')).sort(
     padding-inline: var(--space-l);
     padding-inline: 3vw;
   }
+  .wrapper {
+    --wrapper-max-width: 70rem;
+  }
 </style>
 
 <BaseLayout>
 	<main>
-    <h1 data-theme='dark'>Creative Archive</h1>
-    <ul class="grid" data-rows="masonry" role="list">
-      {
-        archive.map((work) => (
-          <li>
-            <CardArchive work={work} />
-          </li>
-        ))
-      }
-    </ul>
+    <div class="wrapper">
+      <h1 data-theme='dark'>Creative Archive</h1>
+      <ul class="grid" data-rows="masonry" role="list">
+        {
+          archive.map((work) => (
+            <li>
+              <CardArchive work={work} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
 	</main>
 </BaseLayout>
 
