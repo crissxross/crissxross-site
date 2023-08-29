@@ -14,22 +14,19 @@ const today = new Date();
 <style>
   .card {
     display: grid;
-    gap: var(--space-xs);
+    gap: var(--space-s);
     container: card / inline-size;
   }
   .content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--space-xs);
+    gap: var(--space-s);
   }
   /* 60ch = 36rem, 36rem + 1rem * 2 padding = 38rem */
   @container card (inline-size > 38rem) {
     .content {
       grid-template-columns: 1fr 1fr;
       gap: var(--space-m);
-    }
-    img {
-      padding-block-start: var(--space-l);
     }
   }
   footer {
@@ -39,14 +36,11 @@ const today = new Date();
 </style>
 
 <article class="card">
-  <!-- <div class="grid" data-layout="50-50"> -->
+  <h2>
+    <a href={`/works/${slug}/`}>{data.title}</a>
+  </h2>
   <div class="content">
-    <div class="flow">
-      <h2>
-        <a href={`/works/${slug}/`}>{data.title}</a>
-      </h2>
-      <p>{ data.description }</p>
-    </div>
+    <p>{ data.description }</p>
     {
       data.image && (
         <img src={data.image.src} alt={data.image.alt} />
