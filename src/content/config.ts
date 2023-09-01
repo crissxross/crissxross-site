@@ -2,7 +2,7 @@ import { defineCollection, z } from 'astro:content';
 
 const blog = defineCollection({
 	// Type-check frontmatter using a schema
-	schema: z.object({
+	schema: ({ image }) => z.object({
 		title: z.string(),
 		description: z.string(),
 		author: z.string(),
@@ -16,12 +16,12 @@ const blog = defineCollection({
 			.optional()
 			.transform((str) => (str ? new Date(str) : undefined)),
     draft: z.boolean().optional(),
-    heroImage: z.string().optional(),
+    heroImage: image().optional(),
 	}),
 });
 
 const works = defineCollection({
-	schema: z.object({
+	schema: ({ image }) => z.object({
 		title: z.string(),
 		description: z.string(),
 		author: z.string(),
@@ -32,10 +32,8 @@ const works = defineCollection({
 			.transform((val) => new Date(val)),
 		wip: z.boolean(),
 		tech: z.string().optional(),
-		image: z.object({
-      src: z.string(),
-      alt: z.string(),
-    }).optional(),
+    image: image().optional(),
+    imageAlt: z.string().optional(),
 		tags: z.string().array().optional(),
 		awards: z.object({
 			name: z.string(),
@@ -55,7 +53,7 @@ const works = defineCollection({
 });
 
 const archive = defineCollection({
-	schema: z.object({
+	schema: ({ image }) => z.object({
 		title: z.string(),
 		description: z.string(),
 		author: z.string(),
@@ -69,12 +67,8 @@ const archive = defineCollection({
 			.or(z.date())
 			.transform((val) => new Date(val)).optional(),
 		tech: z.string().optional(),
-    imageStrip: z.string().optional(),
-    imageThumb: z.string().optional(),
-		image: z.object({
-      src: z.string(),
-      alt: z.string(),
-    }).optional(),
+    imageStrip: image().optional(),
+    imageThumb: image().optional(),
 		youtubeVideos: z.object({
 			id: z.string(),
 			name: z.string(),

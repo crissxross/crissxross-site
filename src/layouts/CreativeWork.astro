@@ -1,11 +1,12 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 import SingleLayout from './SingleLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'works'>['data'];
 
-const { title, description, releaseDate, image, url, accolades } = Astro.props;
+const { title, description, releaseDate, image, imageAlt, url, accolades } = Astro.props;
 const today = new Date();
 ---
 
@@ -44,8 +45,8 @@ const today = new Date();
     )
   }
   {
-    image && (
-      <img src={image.src} alt={image.alt} />
+    image && imageAlt && (
+      <Image src={image} alt={imageAlt} />
     )
   }
   {
