@@ -1,19 +1,27 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 import SingleLayout from './SingleLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 
-
 type Props = CollectionEntry<'works'>['data'];
 
-const { title, description, releaseDate } = Astro.props;
+const { title, description, releaseDate, image, imageAlt, url, accolades } = Astro.props;
 const today = new Date();
 ---
 
 <style>
-	span {
+	.wip {
 		font-style: italic;
 	}
+  img {
+    margin-inline: auto;
+    padding-block: var(--space-s);
+  }
+  .play {
+    display: grid;
+    place-content: center;
+  }
 </style>
 
 <SingleLayout>
@@ -25,10 +33,37 @@ const today = new Date();
       (
         <FormattedDate date={releaseDate} option='m-y' />
       ):
-      <span>Work in progress</span>
+      <span class="wip">Work in progress</span>
     }
   </p>
   <p>{description}</p>
-  <hr />
+  {
+    url && (
+      <div class="play">
+        <a class="button" data-size="lg" href={url}>Play {title}</a>
+      </div>
+    )
+  }
+  {
+    image && imageAlt && (
+      <Image src={image} alt={imageAlt} />
+    )
+  }
+  {
+    accolades && accolades.length > 0 && (
+      <details>
+        <summary>Presentations & exhibitions</summary>
+        <p>Some of the places where <cite>{title}</cite> has been exhibited, presented or performed:</p>
+        <ul>
+        {
+          accolades &&
+            accolades?.map((accolade) => (
+              <li><a href={accolade.url}>{accolade.name}</a></li>
+            ))
+        }
+        </ul>
+      </details>
+    )
+  }
   <slot />
 </SingleLayout>

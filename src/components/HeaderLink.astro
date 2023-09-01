@@ -13,13 +13,36 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, '');
   a {
     display: inline-block;
     text-decoration: none;
+    background-color: var(--surface-3);
+    padding: 1em 1.5em;
+    padding: 0.625em 1.25em;
+    border-radius: 0.15em;
+  }
+  a:hover {
+    background-color: var(--surface-4);
+    /* filter: brightness(130%); */
+  }
+  a:focus {
+    outline-color: transparent;
+  }
+  a:focus-visible {
+    outline-color: var(--link-color);
   }
   a.active {
     font-weight: bolder;
     text-decoration: underline;
+    text-decoration-thickness: 0.25em;
+		text-underline-offset: 0.25em;
+    text-decoration-color: color-mix(
+			in oklab, var(--link-color), transparent 25%
+		);
   }
 </style>
 
-<a href={href} class:list={[className, { active: isActive }]} {...props}>
+<a href={href}
+  class:list={[className, { active: isActive }]}
+  aria-current={ pathname === href }
+  {...props}
+>
 	<slot />
 </a>

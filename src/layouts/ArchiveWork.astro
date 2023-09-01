@@ -2,12 +2,20 @@
 import type { CollectionEntry } from 'astro:content';
 import SingleLayout from './SingleLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import VideoYouTube from '../components/VideoYouTube.astro';
 
 
 type Props = CollectionEntry<'archive'>['data'];
 
-const { title, description, releaseDate, accolades, awards, youtubeVideos, image } = Astro.props;
+const { title, description, releaseDate, lastReleaseDate, accolades, awards, youtubeVideos, image, collaborators, url } = Astro.props;
 ---
+
+<style>
+  .play {
+    display: grid;
+    place-content: center;
+  }
+</style>
 
 <SingleLayout>
   <h1 class="title">{title}</h1>
@@ -17,27 +25,29 @@ const { title, description, releaseDate, accolades, awards, youtubeVideos, image
         <FormattedDate date={releaseDate} option='y' />
       )
     }
+    {
+      lastReleaseDate && (
+        <span> &ndash; <FormattedDate date={lastReleaseDate} option='y' /></span>
+      )
+    }
   </p>
+    {
+      collaborators && <p>{collaborators}</p>
+    }
   <p>{description}</p>
-  <hr />
   {
-    youtubeVideos && (
-      <div class="video-container">
-        {
-          youtubeVideos?.map((video) => (
-            <iframe class="youtube-video"
-              // width="560"
-              // height="315"
-              src={`https://www.youtube-nocookie.com/embed/${video.id}`}
-              title={video.name}
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          ))
-        }
+    url && (
+      <div class="play">
+        <a class="button" data-size="lg" href={url}>Play {title}</a>
       </div>
     )
+  }
+  <!-- <hr /> -->
+  {
+    youtubeVideos && youtubeVideos.length > 0 &&
+      <div class="video-container">
+        <VideoYouTube id={youtubeVideos[0].id} title={title} />
+      </div>
   }
   <slot />
   { awards && <h2 class="step-2">Awards</h2> }
@@ -50,6 +60,8 @@ const { title, description, releaseDate, accolades, awards, youtubeVideos, image
   }
   </ul>
   <h2 class="step-2">Publications, exhibitions & performances</h2>
+  <!-- <p>Some of the places where <cite>{title}</cite> has appeared:</p> -->
+  <p>Some of the places where <cite>{title}</cite> has been published, exhibited or performed:</p>
   <ul>
   {
     accolades &&

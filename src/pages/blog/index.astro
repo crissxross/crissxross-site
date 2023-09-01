@@ -3,9 +3,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import CardBlog from '../../components/CardBlog.astro';
 
-const posts = (await getCollection('blog')).sort(
+const draftPosts = (await getCollection('blog', ({ data }) => {
+  return data.draft === true;
+})).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+const publishedPosts = (await getCollection('blog', ({ data }) => {
+  return data.draft !== true;
+})).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const showDrafts = true;
+
 ---
 
 <BaseLayout>
@@ -13,7 +24,12 @@ const posts = (await getCollection('blog')).sort(
     <h1 data-theme='dark'>Blog posts</h1>
     <ul role="list" class="flow">
       {
-        posts.map((post) => (
+        showDrafts && draftPosts.map((post) => (
+          <CardBlog post={post} />
+        ))
+      }
+      {
+        publishedPosts.map((post) => (
           <CardBlog post={post} />
         ))
       }

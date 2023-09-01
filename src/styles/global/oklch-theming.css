@@ -2,12 +2,18 @@
 
 /* TODO: brand colors (--color-hue), accent colors, supporting colors, neutrals (--gray-hue) */
 
+/* TODO: add BUTTON colors to light & dark themes for use with Button.astro component */
+
+/* 0 = lightest    15 = darkest */
+
 :root {
   color-scheme: light dark;
 }
 
 * {
-  --hue-primary: 15;
+  /* --hue-primary: 15; */
+  /* --hue-primary: 360; */
+  --hue-primary: 5;
   --hue-secondary: 300;
 
   --color-hue: var(--hue-primary);
@@ -23,9 +29,13 @@ html {
   --surface-2: var(--gray-1);
   --surface-3: var(--gray-2);
   --surface-4: var(--gray-3);
+  --surface-5: var(--gray-4);
+  --bg-surface: var(--gray-14);
 
   --link-color: var(--color-8);
   accent-color: var(--color-bright);
+
+  --btn-text: var(--color-0);
 
   & .secondary {
     --color-hue: var(--hue-secondary);
@@ -54,12 +64,16 @@ html {
   html {
     --text-1: var(--color-0);
     --text-2: var(--color-1);
-    --surface-1: var(--gray-14);
-    --surface-2: var(--gray-13);
-    --surface-3: var(--gray-12);
-    --surface-4: var(--gray-11);
+    --surface-1: var(--gray-15);
+    --surface-2: var(--gray-14);
+    --surface-3: var(--gray-13);
+    --surface-4: var(--gray-12);
+    --surface-5: var(--gray-11);
+    --bg-surface: var(--gray-15);
 
     --link-color: var(--color-3);
+
+    --btn-text: var(--color-14);
 
     & .secondary {
       --text-1: var(--color-0);
@@ -81,6 +95,7 @@ html {
   }
 }
 
+[color-scheme="light"],
 [data-theme="light"] {
   color-scheme: light;
 
@@ -90,52 +105,26 @@ html {
   --surface-2: var(--gray-1);
   --surface-3: var(--gray-2);
   --surface-4: var(--gray-3);
+  --surface-5: var(--gray-4);
 
   --link-color: var(--color-8);
 }
 
+[color-scheme="dark"],
 [data-theme='dark'] {
   color-scheme: dark;
 
   --text-1: var(--color-0);
   --text-2: var(--color-1);
-  --surface-1: var(--gray-14);
-  --surface-2: var(--gray-13);
-  --surface-3: var(--gray-12);
-  --surface-4: var(--gray-11);
+  --surface-1: var(--gray-15);
+  --surface-2: var(--gray-14);
+  --surface-3: var(--gray-13);
+  --surface-4: var(--gray-12);
+  --surface-5: var(--gray-11);
 
   --link-color: var(--color-3);
 }
-
-
-/* NOT SURE HOW TO USE THESE 👇 */
-
-[color-scheme="light"] {
-  color-scheme: light;
-
-  --text-1: var(--color-15);
-  --text-2: var(--color-14);
-  --surface-1: var(--gray-0);
-  --surface-2: var(--gray-1);
-  --surface-3: var(--gray-2);
-  --surface-4: var(--gray-3);
-
-  --link-color: var(--color-8);
-}
-
-[color-scheme="dark"] {
-  color-scheme: dark;
-
-  --text-1: var(--color-0);
-  --text-2: var(--color-1);
-  --surface-1: var(--gray-14);
-  --surface-2: var(--gray-13);
-  --surface-3: var(--gray-12);
-  --surface-4: var(--gray-11);
-
-  --link-color: var(--color-3);
-}
-
+/* 👆 NOT SURE HOW TO USE [color-scheme="light"] & [color-scheme="dark"] 👆 */
 
 /* FOR REFERENCE ONLY Open Props named props */
 /*

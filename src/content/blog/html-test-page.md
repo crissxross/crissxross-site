@@ -3,6 +3,7 @@ title: 'HTML Test Page'
 description: 'A test page filled with common HTML elements to provide visual feedback for testing CSS.'
 author: Christine Wilks
 pubDate: 2022-07-31
+draft: true
 ---
 
 <div id="top" class="page" role="document">

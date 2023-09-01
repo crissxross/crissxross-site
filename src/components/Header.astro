@@ -5,25 +5,33 @@ import { SITE_TITLE } from '../consts';
 
 <style>
 	header {
-		padding-block: var(--space-s);
-		background-color: var(--surface-2);
-    color: var(--text-1);
+    --gutter: var(--space-3xs);
+		padding-block: var(--space-2xs);
+    padding-inline: var(--space-xs);
+		/* background-color: var(--surface-2); */
+    border-block-end: 1px solid var(--surface-4);
 	}
-	h2 {
-		font-size: var(--step-3);
+	.site-title {
+    font-size: var(--step-3);
+    --wght: 800;
+
+    & a {
+      text-decoration: none;
+      color: var(--text-2);
+    }
 	}
 </style>
 
 <header data-theme="dark">
 	<div class="repel wrapper">
-		<h2>
-			{SITE_TITLE}
-		</h2>
+		<div class="site-title">
+      <a href="/">{SITE_TITLE}</a>
+		</div>
 		<nav class="cluster">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/works">Creative Works</HeaderLink>
 			<HeaderLink href="/archive">Archive</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
+			<!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
 			<HeaderLink href="/about">About</HeaderLink>
 		</nav>
 	</div>

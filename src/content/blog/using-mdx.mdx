@@ -2,8 +2,10 @@
 title: 'Using MDX'
 description: 'Lorem ipsum dolor sit amet'
 author: Christine Wilks
-pubDate: '01 Aug 2023'
-heroImage: '/placeholder-hero.jpg'
+pubDate: '05 Aug 2023'
+heroImage: '../../assets/placeholder-hero.jpg'
+heroImageAlt: 'A placeholder hero image'
+draft: true
 ---
 
 This theme comes with the [@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/) integration installed and configured in your `astro.config.mjs` config file. If you prefer not to use MDX, you can disable support by removing the integration from your config file.
@@ -22,8 +24,15 @@ When you open this page in the browser, you should see the clickable button belo
 import HeaderLink from '../../components/HeaderLink.astro';
 
 <HeaderLink href="#" onclick="alert('clicked!')">
-	Embedded component in MDX
+	HeaderLink component embedded in MDX
 </HeaderLink>
+
+import Button from '../../components/Button.astro';
+
+<Button theme="primary" href="#" onclick="alert('clicked!')">
+  Embedded Button component in mdx
+</Button>
+
 
 ## More Links
 

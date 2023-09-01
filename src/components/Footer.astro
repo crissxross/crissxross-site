@@ -4,24 +4,36 @@ const today = new Date();
 
 <style>
 	footer {
-		padding-block: var(--space-m);
-		text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: var(--space-m);
+    justify-items: center;
+		padding-block-start: var(--space-m);
+		padding-block-end: var(--space-l);
 		background-color: var(--surface-2);
     color: var(--text-1);
 	}
-	p:first-of-type {
-		margin-bottom: var(--space-2xs);
-	}
+  .cluster {
+    --cluster-horizontal-alignment: center;
+  }
 </style>
 
 <footer data-theme="dark">
-	<div class="center-measure">
-		<p><a href="https://github.com/crissxross">GitHub</a>
-			| <a href="http://codepen.io/crissxross/">Codepen</a>
-			| <a href="https://www.youtube.com/channel/UCj5Q-NFplyMnzSe8fPJcXmA">YouTube</a>
-			| twitter <a href="https://twitter.com/crissxross">@crissxross</a></p>
+		<ul role="list" class="cluster">
+      <li><a href="https://github.com/crissxross">GitHub</a></li>
+
+			<li><a href="https://codepen.io/crissxross">Codepen</a></li>
+			<li><a href="https://www.youtube.com/channel/UCj5Q-NFplyMnzSe8fPJcXmA">YouTube</a></li>
+      <li>
+        <!-- <small>twitter:</small>  -->
+        <a href="https://twitter.com/crissxross">@crissxross</a>
+      </li>
+      <li>
+        <!-- <small>mastadon:</small> -->
+        <a href="https://pkm.social/@crissxross">@crissxross@pkm.social</a>
+      </li>
+    </ul>
 		<p>
 			&copy; {today.getFullYear()} Christine Wilks. All rights reserved.
 		</p>
-	</div>
 </footer>

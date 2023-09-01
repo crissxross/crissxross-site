@@ -1,6 +1,8 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
 import FormattedDate from "./FormattedDate.astro";
+import { Icon } from 'astro-icon';
 
 interface Props {
   work: CollectionEntry<'works'>;
@@ -10,20 +12,61 @@ const { data, slug } = Astro.props.work;
 const today = new Date();
 ---
 
-<article class="card flow">
+<style>
+  .card {
+    display: grid;
+    gap: var(--space-s);
+    container: card / inline-size;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-s);
+  }
+  /* 60ch = 36rem, 36rem + 1rem * 2 padding = 38rem */
+  @container card (inline-size > 38rem) {
+    .content {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-m);
+    }
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  small {
+    padding-inline-start: var(--space-3xs-2xs);
+  }
+</style>
+
+<article class="card">
   <h2>
     <a href={`/works/${slug}/`}>{data.title}</a>
   </h2>
-  <p>{ data.description }</p>
-  <p>
+  <div class="content">
+    <p>{ data.description }</p>
     {
-      data.releaseDate && data.releaseDate < today ?
-      (
-        <FormattedDate date={data.releaseDate} option='m-y' />
-      ) :
-      (
-        <span>work in progress</span>
+      data.image && data.imageAlt && (
+        <Image src={data.image} alt={data.imageAlt} />
       )
-    } <small>{data.tech}</small>
-  </p>
+    }
+  </div>
+  <footer>
+    <div>
+      {
+        data.releaseDate && data.releaseDate < today ?
+        (
+          <FormattedDate date={data.releaseDate} option='m-y' />
+        ) :
+        (
+          <span>work in progress</span>
+        )
+      } <small>{data.tech}</small>
+    </div>
+    {
+      data.url && (
+        <div><a class="button" href={data.url}>Play {data.title} <Icon name="mdi:launch" /> </a></div>
+      )
+    }
+  </footer>
 </article>
