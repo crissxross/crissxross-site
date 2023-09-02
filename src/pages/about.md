@@ -2,7 +2,7 @@
 layout: '../layouts/Page.astro'
 title: 'Christine Wilks, PhD'
 description: 'Writer, artist, developer of creative web apps and interactive digital narratives, and practice-based researcher.'
-heroImage: '/placeholder-about.jpg'
+heroImage: '../assets/Christine0.25x.png'
 ---
 
 ## About me

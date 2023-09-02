@@ -24,15 +24,23 @@ const today = new Date();
     gap: var(--space-s);
   }
   /* 60ch = 36rem, 36rem + 1rem * 2 padding = 38rem */
-  @container card (inline-size > 38rem) {
+  @container card (inline-size > 36rem) {
     .content {
       grid-template-columns: 1fr 1fr;
+      gap: var(--space-m);
+    }
+  }
+  @container section (inline-size > 1050px) {
+    .card {
+      /* padding: var(--space-m-l); */
+      padding: var(--space-m);
       gap: var(--space-m);
     }
   }
   footer {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
   }
   small {
     padding-inline-start: var(--space-3xs-2xs);
@@ -44,12 +52,12 @@ const today = new Date();
     <a href={`/works/${slug}/`}>{data.title}</a>
   </h2>
   <div class="content">
-    <p>{ data.description }</p>
     {
       data.image && data.imageAlt && (
         <Image src={data.image} alt={data.imageAlt} />
       )
     }
+    <p>{ data.description }</p>
   </div>
   <footer>
     <div>

@@ -19,7 +19,10 @@ const { title, description, heroImage } = Astro.props.frontmatter || Astro.props
 </style>
 
 <SingleLayout>
-  {heroImage && <img src={heroImage.src} width={heroImage.width} height={heroImage.height} alt="" />}
+  {
+    heroImage &&
+    <img src={heroImage.src} width={heroImage.width} height={heroImage.height} alt="" />
+  }
   <h1 class="title">{title}</h1>
   <p>{description}</p>
   <hr />
