@@ -2,12 +2,16 @@
 layout: '../layouts/Page.astro'
 title: 'Christine Wilks, PhD'
 description: 'Writer, artist, developer of creative web apps and interactive digital narratives, and practice-based researcher.'
-heroImage: '../assets/Christine0.25x.png'
+heroImage: '../assets/ChristineHeadShot.png'
 ---
+import { Image } from 'astro:assets';
+import ChristineHeadShot from '../assets/ChristineHeadShot.png';
+
+<Image class="headshot" src={ChristineHeadShot} alt="Christine smiling" />
 
 ## About me
 
-I'm a digital writer, artist, developer of creative web apps and practice-based researcher. In my creative practice and research I specialise in character-driven interactive digital narratives that adapt to reader choice and have the potential to move and transform people. This involves developing original ludonarrative techniques (where story and gameplay entwine) to model convincing characters with apparent psychological depth.
+I like to write, design, code and animate digital stories and art experiences for the web. In my creative practice and research I specialise in character-driven interactive digital narratives that adapt to reader choice and have the potential to move people and, in some instances, benefit their well-being. This involves developing original ludonarrative techniques (where story and gameplay entwine) to model convincing characters with apparent psychological depth.
 
 ### Current projects
 
