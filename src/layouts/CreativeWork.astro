@@ -14,7 +14,7 @@ const today = new Date();
 	.wip {
 		font-style: italic;
 	}
-  img {
+  .pic {
     margin-inline: auto;
     padding-block: var(--space-s);
   }
@@ -46,7 +46,9 @@ const today = new Date();
   }
   {
     image && imageAlt && (
-      <Image src={image} alt={imageAlt} />
+      <div class="pic">
+        <Image src={image} alt={imageAlt} />
+      </div>
     )
   }
   {

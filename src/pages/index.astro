@@ -24,12 +24,16 @@ const featuredArchive = archive.filter(
   .wrapper {
     --wrapper-max-width: 70rem
   }
+  section {
+    container: section / inline-size;
+  }
 </style>
 
 <BaseLayout>
 	<main>
     <div class="wrapper flow">
       <h1 data-theme='dark'>Creative work by Christine Wilks</h1>
+      <p data-theme='dark'>I write, design and code interactive narratives & creative web apps.</p>
       <section class="flow">
         <h2 data-theme='dark'>New release!</h2>
         <CardWork work={voices} />
