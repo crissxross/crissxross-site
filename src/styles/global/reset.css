@@ -1,14 +1,23 @@
 /*
  * [Modified] Modern CSS Reset
- * reset from Andy Bell https://andy-bell.co.uk/a-modern-css-reset/
+ * reset from NEW Andy Bell https://andy-bell.co.uk/a-more-modern-css-reset/
  * modifications from Stephanie Eckles https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/
 */
+
+/* TODO: add more of Andy Bell's NEW CSS RESET - or at least consider & compare all to his resets */
 
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 /* Remove default margin */
